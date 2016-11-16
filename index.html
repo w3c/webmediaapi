@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset='utf-8'>
-    <title>Web Media APIs</title>
+    <title>Web Media APIs 2017</title>
     <script 
      src='https://www.w3.org/Tools/respec/respec-w3c-common' 
      class='remove'></script>
@@ -10,16 +10,152 @@
       var respecConfig = {
         specStatus: "CG-DRAFT",
         editors: [{
+          name: "Mark Vickers",
+          url: "mailto:mark_vickers@comcast.com",
+          company: "Comcast",
+          companyURL: "http://www.comcast.com"
         }],
         processVersion: 2015,
         edDraftURI: "http://w3c.github.io/webmediaapi",
-        shortName: "webmediaapi",
+        shortName: "dahut",
         wg: "Web Media API Community Group",
         wgURI: "https://www.w3.org/community/webmediaapi/",
       };
     </script>
   </head>
   <body>
-    <p class="note">Placeholder for the Web Media API specification.</p>
+    <section id='abstract'>
+      <p>
+This specification defines the Web APIs that should be included in device implementations to support media web apps in 2017. This specification should be updated at least annually to keep pace with the evolving Web platform. This specification is comprised of references to existing specifications in W3C and other specification groups. The target devices will include any device that runs a modern HTML user agent, including televisions, game machines, set-top boxes, mobile devices and personal computers.
+      </p>
+      <p>
+The goal of this Web Media API Community Group specification is to transition to the W3C Recommendation Track for standards development.
+      </p>
+    </section>
+    <section id='sotd'>
+    </section>
+    <section>
+      <h2>Introduction</h2>
+<ol class="ednote" title="Notes on v1 draft specification:">
+<li>The approach taken in this draft is to only include specifications that are of particular significance to application programmers, but not include all the specifications cited by those included specifications. For example, IETF RFC 1345, Character Mnemonics and Character Sets [[RFC1345]] is required by the HTML5 spec included here, but is not included as a required spec here. </li>
+<li>Required APIs are meant to be available in 2016 in a usable form in the four major web user agent code bases. This is to enable the APIs to be delivered in consumer products in 2017</li>
+<li>Recommended APIs represent desired functionality that is not yet implemented widely enough to be Required.</li>
+</ol>
+    </section>
+    <section>
+      <h2>Required specifications</h2>
+    <section>
+      <h3>HTML core specifications</h3>
+      <p>Devices MUST support the following specifications:</p>
+        <ul>
+        <li>HTML 5.1 [[!HTML51]]</li>
+	<li>ECMAScript Language Specification, Edition 5.1 [[!ECMASCRIPT-5.1]]</li>
+<p class="ednote">
+ECMA published ECMAScript 6 [[ECMASCRIPT-6.0]] in 2015 & ECMAScript 7 [[ECMASCRIPT]] in 2016, but I don't know if they're widely implemented, yet.
+<p>
+        </ul>
+    </section>
+    <section>
+      <h3>DOM specifications</h3>
+      <p>Devices MUST return remote control or keyboard key events to the web application using standard code values and key values from the following specifications:</p>
+        <ul>
+        <li> DOM 4 [[!DOM4]]</li>	
+        <li> UI Events KeyboardEvent code Values [[!UIEVENTS-CODE]]</li>
+        <li> UI Events KeyboardEvent key Values [[!UIEVENTS-KEY]]</li>
+        </ul>
+    </section>
+    <section>
+      <h3>CSS specifications</h3>
+<p class="ednote">
+The following list of widely deployed and interoperable CSS specs is taken directly from CSS Snapshot 2015 [[CSS-2015]]
+</p>
+      <p>Devices MUST support the following specifications:</p>
+        <ul>
+        <li> Cascading Style Sheets Level 2 Revision 1 (CSS 2.1) Specification [[!CSS2]]</li>
+        <li> CSS Syntax Module Level 3 [[!CSS-SYNTAX-3]]</li>
+        <li> CSS Style Attributes [[!CSS-STYLE-ATTR]]</li>
+        <li> Media Queries Level 3 [[!CSS3-MEDIAQUERIES]]</li>
+        <li> CSS Conditional Rules Module Level 3 [[!CSS3-CONDITIONAL]]</li>
+        <li> CSS Namespaces Module Level 3 [[!CSS-NAMESPACES-3]]</li>
+        <li> Selectors Level 3 [[!SELECT]]</li>
+        <li> CSS Cascading and Inheritance Level 3 [[!CSS-CASCADE-3]]</li>
+        <li> CSS Values and Units Module Level 3 [[!CSS-VALUES]]</li>
+        <li> CSS Color Module Level 3 [[!CSS3-COLOR]]</li>
+        <li> CSS Backgrounds and Borders Module Level 3 [[!CSS3-BACKGROUND]]</li>
+        <li> CSS Image Values and Replaced Content Module Level 3 [[!CSS3-IMAGES]]</li>
+        <li> CSS Fonts Module Level 3 [[!CSS-FONTS-3]]</li>
+        <li> CSS Multi-column Layout Module [[!CSS3-MULTICOL]]</li>
+        <li> CSS Basic User Interface Module Level 3 (CSS3 UI) [[!CSS-UI-3]]</li>
+        <li> Compositing and Blending Level 1 [[!COMPOSITING]]</li>
+        <li> CSS Transitions [[!CSS3-TRANSITIONS]]</li>
+        <li> CSS Animations [[!CSS3-ANIMATIONS]]</li>
+        <li> CSS Flexible Box Module Level 1 [[!CSS-FLEXBOX-1]]</li>
+        <li> CSS Transforms Module Level 1 [[!CSS-TRANSFORMS-1]]</li>
+        </ul>
+    </section>
+    <section>
+      <h3>Media specifications</h3>
+      <p>Devices MUST support the following specifications:</p>
+        <ul>
+        <li> Encrypted Media Extensions [[!ENCRYPTED-MEDIA]]</li>
+        <li> Media Source Extensions [[!MEDIA-SOURCE]]</li>
+<p class="ednote">
+The ISO Common Encryption [[!eme-stream-mp4]] reference may need to be updated for MPEG CMAF.
+<p>
+	<li>ISO Common Encryption ('cenc') Protection Scheme for ISO Base Media File Format Stream Format [[!eme-stream-mp4]]</li>
+        </ul>
+      <p>Devices SHOULD support the following specifications:</p>
+        <ul>
+        <li> Sourcing In-band Media Resource Tracks from Media Containers into HTML [[INBANDTRACKS]]</li>
+        </ul>
+    </section>
+    <section>
+      <h3>Graphics specifications</h3>
+      <p>Devices MUST support the following specifications:</p>
+        <ul>
+        <li> HTML Canvas 2D Context [[!2DCONTEXT]]</li>
+        <li> Fullscreen API Standard [[!WHATWG-FULLSCREEN]]</li>
+        <li> JPEG File Interchange Format [[!JPEG]]</li>
+        <li>  Portable Network Graphics (PNG) Specification (Second Edition) [[!PNG]]</li>
+         </ul>
+     <p>Devices SHOULD support the following specifications:</p>
+        <ul>
+        <li>  WebGL Specification, Version 1.0.3 [[WEBGL]]</li>
+        </ul>
+     </section>
+    <section>
+      <h3>Font specifications</h3>
+      <p>Devices MUST support the following specifications:</p>
+        <ul>
+        <li> Open Font Format [[!OPEN-FONT-FORMAT]]</li>
+        <li> WOFF File Format 1.0 [[!WOFF]]</li>
+        </ul>
+    </section>
+    <section>
+      <h3>Networking specifications</h3>
+      <p>Devices MUST support the following specifications:</p>
+        <ul>
+        <li> The WebSocket API [[!WEBSOCKETS]]</li>
+        <li> XMLHttpRequest Level 1 [[!XHR]]</li>
+        </ul>
+    </section>
+    <section>
+      <h3>Security specifications</h3>
+      <p>Devices MUST support the following specifications:</p>
+        <ul>
+        <li> Cross-Origin Resource Sharing [[!CORS]]</li>
+        <li> Content Security Policy Level 2 [[!CSP2]]</li>
+        <li> Web Cryptography API [[!WebCryptoAPI]]</li>
+        </ul>
+    </section>
+    <section>
+      <h3> Other web specifications</h3>
+      <p>Devices MUST support the following specifications:</p>
+        <ul>
+        <li> Web Storage [[!WEBSTORAGE]]</li>
+        <li> Web Workers [[!WORKERS]]</li>
+        </ul>
+    </section>
+    </section>
   </body>
 </html>
