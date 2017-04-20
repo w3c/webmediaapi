@@ -70,12 +70,11 @@ The goal of this Web Media API Community Group specification is to transition to
     </section>
     <section>
       <h3>DOM specifications</h3>
-      <p>Devices MUST return remote control or keyboard key events to the web application using standard code values and key values from the following specifications:</p>
-        <ul>
-        <li> DOM 4 [[!DOM4]]</li>	
-        <li> UI Events KeyboardEvent code Values [[!UIEVENTS-CODE]]</li>
-        <li> UI Events KeyboardEvent key Values [[!UIEVENTS-KEY]]</li>
-        </ul>
+        <div class="note">
+          <p>[[!HTML5.1]] requires support for [[!DOM4]], [[!UIEvents]], [[!UIEvents-Key]] and [[!UIEvents-Code]].</p>
+          <p>Of particular note, these specifications require that client implementors must ensure that all input device keys that are sent to the Web app use standard code values and key values, such as <a href="http://www.w3.org/TR/uievents-code/#key-media">Media Keys</a> code values and <a href="http://www.w3.org/TR/uievents-key/#keys-navigation">Navigation Keys</a>, <a href="http://www.w3.org/TR/uievents-key/#keys-device">Device Keys</a>, <a href="http://www.w3.org/TR/uievents-key/#keys-multimedia">Multimedia Keys</a> etc.</p>
+          <p class="example">For example, any keypress of a red colored key on a remote control device must result in <code>ColorF0Red</code> being sent to the application.</p>
+        </div>
     </section>
     <section>
       <h3>CSS specifications</h3>
