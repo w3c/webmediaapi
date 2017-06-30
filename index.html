@@ -13,19 +13,19 @@
           name: "David Evans",
           url: "",
           company: "British Broadcasting Corporation",
-          companyURL: "http://www.bbc.co.uk/rd"
+          companyURL: "https://www.bbc.co.uk/rd"
         },
         {
           name: "Thasso Griebel",
           url: "mailto:thasso.griebel@castlabs.com",
           company: "CastLabs GmbH",
-          companyURL: "http://www.castlabs.com"
+          companyURL: "https://www.castlabs.com"
         },
         {
           name: "Mark Vickers",
           url: "mailto:mark_vickers@comcast.com",
           company: "Comcast",
-          companyURL: "http://www.comcast.com"
+          companyURL: "https://www.comcast.com"
         }],
         processVersion: 2015,
         edDraftURI: "https://w3c.github.io/webmediaapi",
@@ -53,179 +53,161 @@
   </head>
   <body>
     <section id="abstract">
-      <p>
-This specification defines the Web APIs that should be included in device implementations to support media web apps in 2017. This specification should be updated at least annually to keep pace with the evolving Web platform. This specification is comprised of references to existing specifications in W3C and other specification groups. The target devices will include any device that runs a modern HTML user agent, including televisions, game machines, set-top boxes, mobile devices and personal computers.
-      </p>
-      <p>
-The goal of this Web Media API Community Group specification is to transition to the W3C Recommendation Track for standards development.
-      </p>
+      <p>This specification defines the Web APIs that should be included in device implementations to support media web apps in 2017. This specification should be updated at least annually to keep pace with the evolving Web platform. This specification is comprised of references to existing specifications in W3C and other specification groups. The target devices will include any device that runs a modern HTML user agent, including televisions, game machines, set-top boxes, mobile devices and personal computers.</p>
+      <p>The goal of this Web Media API Community Group specification is to transition to the W3C Recommendation Track for standards development.</p>
     </section>
     <section id="sotd">
     </section>
     <section>
       <h2>Introduction</h2>
-<ol class="ednote" title="Notes on v1 draft specification:">
-<li>The approach taken in this draft is to only include specifications that are of particular significance to application programmers, but not include all the specifications cited by those included specifications. For example, IETF RFC 1345, Character Mnemonics and Character Sets [[RFC1345]] is required by the HTML5 spec included here, but is not included as a required spec here. </li>
-</ol>
     </section>
     <section>
       <h2>Required specifications</h2>
-        <p>Required APIs are meant to be available in 2016 in a usable form in the four major web user agent code bases. This is to enable the APIs to be delivered in consumer products in 2017.</p>
-        <p class="note">WAVE makes no requirements around explicit version number or release date for any client code bases - any code base that passes the WAVE HATF test suite is compliant.</p>
-        <p>Recommended APIs represent desired functionality that is not yet implemented widely enough to be Required.</p>
-        <p>Where an API is made available by a <quot>polyfill</quot>, responsibility for providing the polyfill lies with the developer.</p>
-    <section>
-      <h3>HTML core specifications</h3>
-      <p>Devices MUST be conforming implementations of the following specifications:</p>
-        <ul>
-        <li>HTML 5.1 [[!HTML51]], devices acting as Web browsers that support the HTML syntax and the XHTML syntax, scripting, and the suggested default rendering.</li>
-        <li>ECMAScript Language Specification, Edition 5.1 [[!ECMASCRIPT-5.1]]</li>
-        </ul>
-      <p>Devices SHOULD be conforming implementations of the following specifications:</p>
-        <ul>
-        <li>ECMAScript Language Specification, Edition 6 [[!ECMASCRIPT-6.0]]</li>
-        </ul>
-    </section>
-    <section>
-      <h3>DOM specifications</h3>
-        <div class="note">
-          <p>[[!HTML51]] requires support for [[!DOM4]], [[!UIEvents]], [[!UIEvents-Key]] and [[!UIEvents-Code]].</p>
-          <p>Of particular note, these specifications require that client implementors must ensure that all input device keys that are sent to the Web app use standard code values and key values, such as <a href="http://www.w3.org/TR/uievents-code/#key-media">Media Keys</a> code values and <a href="http://www.w3.org/TR/uievents-key/#keys-navigation">Navigation Keys</a>, <a href="http://www.w3.org/TR/uievents-key/#keys-device">Device Keys</a>, <a href="http://www.w3.org/TR/uievents-key/#keys-multimedia">Multimedia Keys</a> etc.</p>
-          <p class="example">For example, any keypress of a red colored key on a remote control device must result in <code>ColorF0Red</code> being sent to the application.</p>
-        </div>
-    </section>
-    <section>
-      <h3>CSS specifications</h3>
-<p class="ednote">
-The following list of widely deployed and interoperable CSS specs is taken directly from CSS Snapshot 2017 [[CSS-2017]]
-</p>
-      <p>Devices MUST be conforming implementations of the following specifications:</p>
-        <ul>
-        <li> Cascading Style Sheets Level 2 Revision 1 (CSS 2.1) Specification [[!CSS2]]</li>
-        <li> CSS Syntax Module Level 3 [[!CSS-SYNTAX-3]]</li>
-        <li> CSS Style Attributes [[!CSS-STYLE-ATTR]]</li>
-        <li> Media Queries Level 3 [[!CSS3-MEDIAQUERIES]]</li>
-        <li> CSS Conditional Rules Module Level 3 [[!CSS3-CONDITIONAL]]</li>
-        <li> CSS Namespaces Module Level 3 [[!CSS-NAMESPACES-3]]</li>
-        <li> Selectors Level 3 [[!SELECT]]</li>
-        <li> CSS Cascading and Inheritance Level 3 [[!CSS-CASCADE-3]]</li>
-        <li> CSS Values and Units Module Level 3 [[!CSS-VALUES]]</li>
-        <li> CSS Color Module Level 3 [[!CSS3-COLOR]]</li>
-        <li> CSS Backgrounds and Borders Module Level 3 [[!CSS3-BACKGROUND]]</li>
-        <li> CSS Image Values and Replaced Content Module Level 3 [[!CSS3-IMAGES]]</li>
-        <li> CSS Fonts Module Level 3 [[!CSS-FONTS-3]]</li>
-        <li> CSS Multi-column Layout Module [[!CSS3-MULTICOL]]</li>
-        <li> CSS Basic User Interface Module Level 3 (CSS3 UI) [[!CSS-UI-3]]</li>
-        <li> Compositing and Blending Level 1 [[!COMPOSITING]]</li>
-        <li> CSS Transitions [[!CSS3-TRANSITIONS]]</li>
-        <li> CSS Animations [[!CSS3-ANIMATIONS]]</li>
-        <li> CSS Flexible Box Module Level 1 [[!CSS-FLEXBOX-1]]</li>
-        <li> CSS Transforms Module Level 1 [[!CSS-TRANSFORMS-1]]</li>
-        </ul>
-    </section>
-    <section>
-      <h3>Media specifications</h3>
-      <p>Devices MUST be conforming implementations of the following specifications:</p>
-        <ul>
-        <li> Encrypted Media Extensions [[!ENCRYPTED-MEDIA]]</li>
-        <li> Media Source Extensions [[!MEDIA-SOURCE]]</li>
-        <li>ISO Common Encryption ('cenc') Protection Scheme for ISO Base Media File Format Stream Format [[!eme-stream-mp4]]<p class="ednote">The ISO Common Encryption [[!eme-stream-mp4]] reference may need to be updated for MPEG CMAF.</p>
-        </li>
-        <li> Web Audio API [[!WEBAUDIO]]</li>
-        </ul>
-      <p>Devices SHOULD be conforming implementations of the following specifications:</p>
-        <ul>
-        <li> Sourcing In-band Media Resource Tracks from Media Containers into HTML [[INBANDTRACKS]]</li>
-        <li> Media Fragments URI 1.0 (basic) [[!media-frags]]</li>
-        </ul>
-    </section>
-    <section>
-      <h3>Graphics specifications</h3>
-      <p>Devices MUST be conforming implementations of the following specifications:</p>
-        <ul>
-        <li> HTML Canvas 2D Context [[!2DCONTEXT]]</li>
-        <li> Fullscreen API Standard [[!WHATWG-FULLSCREEN]]</li>
-        <li> JPEG File Interchange Format [[!JPEG]]</li>
-        <li>  Portable Network Graphics (PNG) Specification (Second Edition) [[!PNG]]</li>
-        <li>  Graphics Interchange Format [[!GIF]]</li>
-         </ul>
-     <p>Devices SHOULD be conforming implementations of the following specifications:</p>
-        <ul>
-        <li>  WebGL Specification, Version 1.0.3 [[WEBGL]]</li>
-        </ul>
-     </section>
-    <section>
-      <h3>Font specifications</h3>
-      <p>Devices MUST be conforming implementations of the following specifications:</p>
-        <ul>
-        <li> Open Font Format [[!OPEN-FONT-FORMAT]]</li>
-        <li> WOFF File Format 1.0 [[!WOFF]]</li>
-        </ul>
-    </section>
-    <section>
-      <h3>Networking specifications</h3>
-      <p>Devices MUST be conforming implementations of the following specifications:</p>
-        <ul>
-        <li> The WebSocket API [[!WEBSOCKETS]]</li>
-        <li> XMLHttpRequest [[!XHR]]</li>
-        <li> Fetch [[!FETCH]]</li>
-        </ul>
-      <p>Devices SHOULD be conforming implementations of the following specifications:</p>
-        <ul>
-        <li> Server-Sent Events [[!EVENTSOURCE]]</li>
-        </ul>
-    </section>
-    <section>
-      <h3>Security specifications</h3>
-      <p>Devices MUST be conforming implementations of the following specifications:</p>
-        <ul>
-        <li> Cross-Origin Resource Sharing [[!CORS]]</li>
-        <li> Content Security Policy Level 2 [[!CSP2]]</li>
-        <li> Web Cryptography API [[!WebCryptoAPI]]</li>
-        </ul>
-    </section>
-    <section>
-      <h3> Other web specifications</h3>
-      <p>Devices MUST be conforming implementations of the following specifications:</p>
-        <ul>
-        <li> Web Storage [[!WEBSTORAGE]]</li>
-        <li> Web Workers [[!WORKERS]]</li>
-        <li> Indexed Database API [[!INDEXEDDB]]</li>
-        <li> Cross-document messaging [[!WEB-MESSAGING]]</li>
-        <li> Channel messaging [[!CHANNEL-MESSAGING]]</li>
-        </ul>
-    </section>
-    </section>
-    <section>
-      <h2>APIs not widely implemented across all web platforms</h2>
-      <p>When requiring conformance to a specification in <a href="#required-specifications">Required Specifications</a>, it must be recognised that parts of some web specifications are not currently implemented across all web platforms and may never be. Consequently, the features listed below may not be present in some implementations of this specification and will not be tested as part of our tests.</p>
       <section>
-        <h3>General Exceptions</h3>
+        <h2>Introduction</h2>
+        <p>Required APIs are meant to be available in 2016 in a usable form in the four major web user agent code bases (though there are no requirements around explicit version number or release date for any client code bases). This is to enable the APIs to be delivered in consumer products in 2017.</p>
+        <p>The approach taken in this draft is to only include specifications that are of particular significance to application programmers, but not include all the specifications cited by those included specifications. For example, IETF RFC 1345, Character Mnemonics and Character Sets [[RFC1345]] is required by the HTML5 spec included here, but is not included as a required specification here.</p>
+        <p>Where an API is made available by a <quot>polyfill</quot>, responsibility for providing the polyfill lies with the developer.</p>
         <section>
-          <h4>At-risk features</h4>
-          <p>Some specifications referenced in <a href="#required-specifications">Required Specifications</a> may not have reached Recommendation and, as such, may contain 'at-risk' features. Since the most common reason for features being marked as at-risk is lack of implementations, such features may not be present in some implementations of this specification and will not be tested as part of our tests.</p>
+          <h3>APIs not widely implemented across all web platforms</h3>
+          <p>When requiring conformance to a specification in this section, it must be recognised that parts of some web specifications are not currently implemented across all web platforms and may never be. Consequently, these features may not be present in some implementations of this specification and will not be tested as part of our tests. Any such APIs are noted as exceptions under that API.</p>
         </section>
+        <section>
+          <h3>At-risk features</h3>
+          <p>Some specifications referenced in this section may not have reached Recommendation and, as such, may contain 'at-risk' features. Since the most common reason for features being marked as at-risk is lack of implementations, such features may not be present in some implementations of this specification and will not be tested as part of our tests.</p>
+        </section>
+
       </section>
       <section>
-        <h3>Specific Exceptions</h3>
-        <section>
-          <h3>Web Audio API</h3>
-          <ul>
-            <li><code>MediaStreamAudioSourceNode</code>, <code>MediaStreamAudioDestinationNode</code> [[!WEBAUDIO]]</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Web Workers</h3>
-          <ul>
-            <li>Shared Workers [[!WORKERS]]</li>
-          </ul>
-        </section>
-        <section>
-          <h3>Indexed Database API</h3>
-          <ul>
-            <li>Array key paths and array keys [[!INDEXEDDB]]</li>
-          </ul>
-        </section>
+        <h3>HTML core specifications</h3>
+        <p>Devices MUST be conforming implementations of the following specifications:</p>
+        <ul>
+          <li> HTML 5.1 [[!HTML51]], devices acting as Web browsers that support the HTML syntax and the XHTML syntax, scripting, and the suggested default rendering.</li>
+          <li> ECMAScript Language Specification, Edition 5.1 [[!ECMASCRIPT-5.1]]</li>
+        </ul>
+      </section>
+      <section>
+        <h3>CSS specifications</h3>
+        <p class="ednote">
+        The following list of widely deployed and interoperable CSS specs is taken directly from CSS Snapshot 2017 [[CSS-2017]]
+        </p>
+        <p>Devices MUST be conforming implementations of the following specifications:</p>
+        <ul>
+          <li> Cascading Style Sheets Level 2 Revision 1 (CSS 2.1) Specification [[!CSS2]]</li>
+          <li> CSS Syntax Module Level 3 [[!CSS-SYNTAX-3]]</li>
+          <li> CSS Style Attributes [[!CSS-STYLE-ATTR]]</li>
+          <li> Media Queries Level 3 [[!CSS3-MEDIAQUERIES]]</li>
+          <li> CSS Conditional Rules Module Level 3 [[!CSS3-CONDITIONAL]]</li>
+          <li> CSS Namespaces Module Level 3 [[!CSS-NAMESPACES-3]]</li>
+          <li> Selectors Level 3 [[!SELECT]]</li>
+          <li> CSS Cascading and Inheritance Level 3 [[!CSS-CASCADE-3]]</li>
+          <li> CSS Values and Units Module Level 3 [[!CSS-VALUES]]</li>
+          <li> CSS Color Module Level 3 [[!CSS3-COLOR]]</li>
+          <li> CSS Backgrounds and Borders Module Level 3 [[!CSS3-BACKGROUND]]</li>
+          <li> CSS Image Values and Replaced Content Module Level 3 [[!CSS3-IMAGES]]</li>
+          <li> CSS Fonts Module Level 3 [[!CSS-FONTS-3]]</li>
+          <li> CSS Multi-column Layout Module [[!CSS3-MULTICOL]]</li>
+          <li> CSS Basic User Interface Module Level 3 (CSS3 UI) [[!CSS-UI-3]]</li>
+          <li> Compositing and Blending Level 1 [[!COMPOSITING]]</li>
+          <li> CSS Transitions [[!CSS3-TRANSITIONS]]</li>
+          <li> CSS Animations [[!CSS3-ANIMATIONS]]</li>
+          <li> CSS Flexible Box Module Level 1 [[!CSS-FLEXBOX-1]]</li>
+          <li> CSS Transforms Module Level 1 [[!CSS-TRANSFORMS-1]]</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Media specifications</h3>
+        <p>Devices MUST be conforming implementations of the following specifications:</p>
+        <ul>
+          <li> Encrypted Media Extensions [[!ENCRYPTED-MEDIA]]</li>
+          <li> Media Source Extensions [[!MEDIA-SOURCE]]</li>
+          <li> ISO Common Encryption ('cenc') Protection Scheme for ISO Base Media File Format Stream Format [[!eme-stream-mp4]]<p class="ednote">The ISO Common Encryption [[!eme-stream-mp4]] reference may need to be updated for MPEG CMAF.</p>
+          </li>
+          <li> Web Audio API [[!WEBAUDIO]]
+            <ul><li>Exceptions: Since not all environments currently support Media Streams [[mediacapture-streams]], <code>MediaStreamAudioSourceNode</code> and <code>MediaStreamAudioDestinationNode</code> are not  yet widely supported.</li></ul>
+          </li>
+        </ul>
+      </section>
+      <section>
+        <h3>Graphics specifications</h3>
+        <p>Devices MUST be conforming implementations of the following specifications:</p>
+        <ul>
+          <li> HTML Canvas 2D Context [[!2DCONTEXT]]</li>
+          <li> Fullscreen API Standard [[!WHATWG-FULLSCREEN]]</li>
+          <li> JPEG File Interchange Format [[!JPEG]]</li>
+          <li> Portable Network Graphics (PNG) Specification (Second Edition) [[!PNG]]</li>
+          <li> Graphics Interchange Format [[!GIF]]</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Font specifications</h3>
+        <p>Devices MUST be conforming implementations of the following specifications:</p>
+        <ul>
+          <li> Open Font Format [[!OPEN-FONT-FORMAT]]</li>
+          <li> WOFF File Format 1.0 [[!WOFF]]</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Networking specifications</h3>
+        <p>Devices MUST be conforming implementations of the following specifications:</p>
+        <ul>
+          <li> The WebSocket API [[!WEBSOCKETS]]</li>
+          <li> XMLHttpRequest [[!XHR]]</li>
+          <li> Fetch [[!FETCH]]</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Security specifications</h3>
+        <p>Devices MUST be conforming implementations of the following specifications:</p>
+        <ul>
+          <li> Cross-Origin Resource Sharing [[!CORS]]</li>
+          <li> Content Security Policy Level 2 [[!CSP2]]</li>
+          <li> Web Cryptography API [[!WebCryptoAPI]]</li>
+        </ul>
+      </section>
+      <section>
+        <h3> Other web specifications</h3>
+        <p>Devices MUST be conforming implementations of the following specifications:</p>
+        <ul>
+          <li> Web Storage [[!WEBSTORAGE]]</li>
+          <li> Web Workers [[!WORKERS]]
+            <ul><li>Exceptions: <a href="https://www.w3.org/TR/workers/#shared-workers-and-the-sharedworker-interface">Shared Workers</a> are not yet widely supported.</li></ul>
+          </li>
+          <li> Indexed Database API [[!INDEXEDDB]]
+            <ul><li>Exceptions: Array <a href="https://www.w3.org/TR/IndexedDB/#dfn-key-path">key path</a> and array <a href="https://www.w3.org/TR/IndexedDB/#dfn-key">keys</a> are not yet widely supported.</li></ul>
+          </li>
+          <li> Cross-document messaging [[!WEB-MESSAGING]]</li>
+          <li> Channel messaging [[!CHANNEL-MESSAGING]]</li>
+        </ul>
+      </section>
+    </section>
+    <section>
+      <h2>Recommended specifications</h2>
+      <p>Recommended APIs represent desired functionality that is important for web media delivery, but is not yet implemented widely enough to be Required. Devices MAY be conforming implementations of the specifications listed below. It is expected that, as implementations become available, some of these specifications may become Required Specifications in a future version of this specification.</p>
+      <section>
+        <h3>HTML core specifications</h3>
+        <ul>
+          <li> ECMAScript Language Specification, Edition 6 [[ECMASCRIPT-6.0]]</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Media specifications</h3>
+        <ul>
+          <li> Sourcing In-band Media Resource Tracks from Media Containers into HTML [[INBANDTRACKS]]</li>
+          <li> Media Fragments URI 1.0 (basic) [[media-frags]]</li>
+        </ul>
+      </section>
+      <section>
+        <h3>Graphics specifications</h3>
+        <ul>
+          <li> WebGL Specification, Version 1.0.3 [[WEBGL]]</li>
+        </ul>
+       </section>
+      <section>
+        <h3>Networking specifications</h3>
+        <ul>
+          <li> Server-Sent Events [[EVENTSOURCE]]</li>
+        </ul>
       </section>
     </section>
   </body>
