@@ -10,3 +10,5 @@ This repository contains the Web Media API Snapshot specification that is being 
 [Web Media API Community Group](https://www.w3.org/community/webmediaapi) also maintains repositories for two other specifications:
 - [Web Media Application Developer Guidelines](https://github.com/w3c/webmediaguidelines/)
 - [Web Media User Agent Integration](https://github.com/w3c/webmediaporting)
+
+The [Web Media API Community Group](https://www.w3.org/community/webmediaapi) was proposed by and continues to cooperate with the [CTA WAVE Project](https://cta.tech/Research-Standards/Standards-Listing/WAVE-Project/WAVE-Project.aspx)
