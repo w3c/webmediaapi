@@ -80,7 +80,8 @@
         <h3>HTML core specifications</h3>
         <p>Devices MUST be conforming implementations of the following specifications:</p>
         <ul>
-          <li> HTML 5.1 [[!HTML51]], devices acting as Web browsers that support the HTML syntax and the XHTML syntax, scripting, and the suggested default rendering.</li>
+          <li> HTML 5.2 [[!HTML52]]</li>
+            <ul><li>Note: Must support the conformance class <code>Web browsers and other interactive user agents</code>.</li></ul>
           <li> ECMAScript Language Specification, Edition 6 [[!ECMASCRIPT-6.0]]</li>
         </ul>
       </section>
@@ -133,6 +134,7 @@
           <li> JPEG File Interchange Format [[!JPEG]]</li>
           <li> Portable Network Graphics (PNG) Specification (Second Edition) [[!PNG]]</li>
           <li> Graphics Interchange Format [[!GIF]]</li>
+          <li> WebGL Specification [[!WEBGL-103]]</li>
         </ul>
       </section>
       <section>
@@ -168,6 +170,7 @@
           <li> Web Workers [[!WORKERS]]
             <ul><li>Exceptions: <a href="https://www.w3.org/TR/workers/#shared-workers-and-the-sharedworker-interface">Shared Workers</a> are not yet widely supported.</li></ul>
           </li>
+          <li> Service Workers 1 [[!SERVICE-WORKERS-1]]</li>
           <li> Indexed Database API [[!IndexedDB-20150108]]
             <ul><li>Exceptions: Array <a href="https://www.w3.org/TR/2015/REC-IndexedDB-20150108/#dfn-key-path">key path</a> and array <a href="https://www.w3.org/TR/2015/REC-IndexedDB-20150108/#dfn-key">keys</a> are not yet widely supported.</li></ul>
           </li>
@@ -195,12 +198,6 @@
         </ul>
       </section>
       <section>
-        <h3>Graphics specifications</h3>
-        <ul>
-          <li> WebGL Specification [[WEBGL-103]]<p class="note">Whilst WebGL is already supported in all four of the most widely used user agent code bases, hardware support may be required to implement the specification. Where performant hardware is present, the CG encourages implementation of the specification.</p></li>
-        </ul>
-       </section>
-      <section>
         <h3>Networking specifications</h3>
         <ul>
           <li> Server-Sent Events [[EVENTSOURCE]]</li>
@@ -210,7 +207,6 @@
         <h3> Other web specifications</h3>
         <ul>
           <li> Web App Manifest [[appmanifest]]</li>
-          <li> Service Workers 1 [[service-workers-1]]</li>
         </ul>
       </section>
     </section>
