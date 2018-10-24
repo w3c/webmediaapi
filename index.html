@@ -29,20 +29,27 @@
   <body>
     <section id="abstract">
       <p>This specification lists the Web APIs to support media web apps that are supported across all four of the most widely used user agent code bases at the time of publication. This specification should be updated at least annually to keep pace with the evolving Web platform. We encourage manufacturers to develop products that support the APIs in the most recent version of Web Media API Snapshot. This specification is comprised of references to existing specifications in W3C and other specification groups. The target devices will include any device that runs a modern HTML user agent, including televisions, game machines, set-top boxes, mobile devices and personal computers.</p>
-      <p>The goal of this Web Media API Community Group specification is to transition to the W3C Recommendation Track for standards development.</p>
+      <p>This specification is being developed as part of the <a href="http://cta.tech/WAVE">CTA WAVE Project</a>.</p>
     </section>
     <section id="sotd">
     </section>
     <section class="informative">
       <h2>Introduction</h2>
-      <p>Writing portable media web apps across browsers on consumer products (e.g. smart TVs, game machines, set-top boxes) is much more difficult than writing portable media web apps across PC browsers. One main reason for this is that the browsers on consumer products are often quite out-of-date. While browsers integrated into consumer products are often built from the same major HTML user agent code bases as PC browsers, it is not unusual for a consumer product to be using a code base release that is three or more years old, while PC browsers use recent code base releases.</p>
-      <p>This specification is intended to address this problem by collecting together into one definition key specifications used by media web apps that are all supported in common by all of the four major web user agent code bases, as of 2017. The specification will then be used to generate a test suite, to enable device manufacturers to specify and verify that their browsers are up-to-date with current web standards.</p>
-      <p>However, this specification is not a complete definition of the Web platform. There may be additional specifications that are included in all code bases that are not included in this specification. Furthermore, individual code bases include APIs that are not supported on all other code bases, but are nonetheless widely used. Therefore, this specification and associated tests should only be used as verification of a minimum set of required APIs. There is no suggestion that APIs not included in this specification should be removed from implementations.</p>
+      <p>Writing portable media web apps across browsers on consumer products (e.g. smart TVs, game machines, set-top boxes) is much more difficult than writing portable media web apps across PC browsers. Two main reasons for this are that the browsers on consumer products are often quite out-of-date and that they often have integration issues.</p>
+    <section>
+      <h3>Out-of-date browsers</h3>
+      <p>While browsers integrated into consumer products are often built from the same major HTML user agent code bases as PC browsers, it is not unusual for a consumer product to be using a code base release that is three or more years old, while PC browsers use recent code base releases. Furthermore, browsers on consumer products are often infrequently updated, if ever. This results in very different web API support across devices.</p>
+      <p>This specification is intended to address this problem by listing key specifications used by media web apps that are all supported in common by all of the four major web user agent code bases at the time of publication. The specification will then be used to generate a test suite. The specification and test suite enable device manufacturers to specify and verify that their browsers are up-to-date with current web standards. The specification and tests can also be used to verify updates to browsers in the field.</p>
+      <p>Note that this specification is not defining a subset or profile to be used in place of the full Web platform. There are additional specifications that are included in all code bases that are not included in this specification. Furthermore, individual code bases include APIs that are not supported on all other code bases, but are nonetheless widely used. Therefore, this specification and associated tests should only be used as verification of a minimum set of current APIs. There is no suggestion that APIs not included in this specification should be removed from implementations.</p>
       <p>It is intended that this specification be updated periodically to reflect adoption of new specifications in the Web platform. For example, the specification might be updated once a year for media devices being introduced onto the market in the following year.</p>
-      <p>Each version of the specification will additionally recommend a set of useful web specifications which are not yet supported by all code bases, in order to encourage all code bases to support these recommended APIs.</p>
-      <p>Specifications that are required in this version of this specification may fall out of use in the web and be dropped in whole or in part from some user agent code bases. Hence a specification being "Required" in this version of this specification does not guarantee that it will remain "Required" in future versions of this specification.</p>
-      <p>This specification is being developed in close cooperation with the <a href="http://cta.tech/WAVE">CTA WAVE Project</a>.</p>
     </section>
+    <section>
+      <h3>Integration issues</h3>
+      <p>There are many issues during integration of a web user agent with a hardware device that can affect the operation of web APIs. For example, if insufficient memory is allocated for cookies, they won’t function as intended.</p>
+      <p>To address this issue, this specification includes a list of target values for several APIs which are known to have been impacted by integration issues. There will also be a test suite to verify these values are supported on a device.</p>
+      <p>Note that these values are not mandated by any web standards, but are based on measurement of values supported by popular browsers. Supporting these values should provide better interoperability of web applications with PC and mobile browsers. Manufacturers may choose to exceed these values based on their expected application environments.</p>
+    </section>
+  </section>
     <section id="conformance">
     </section>
     <section>
