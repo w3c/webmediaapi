@@ -172,7 +172,33 @@
         </ul>
       </section>
     </section>
-    <section class="informative">
+    <section id="conformance">
+      <h2>User Agent Integration Specifications</h2>
+      <p>This section contains values for integrating a web user agent with a consumer device. The values are based on de facto requirements from browsers on personal computers and mobile devices. Supporting these integration specifications will increase interoperability with media web apps on other devices.</p>
+      <p>A test suite will evaluate client support for these specifications.</p>
+      <section>
+        <h3>Cookies</h3>
+        <ul>
+          <li> Devices MUST support cookies of length 4096 bytes.</li>
+          <li> Devices MUST support 20 cookies per domain.</li>
+          <li> Devices MUST support 100 total cookies.</li>
+          <li> Devices MUST support persistence of cookies between application sessions.</li>
+        </ul>
+    </section>
+    <section>
+      <h3>Storage</h3>
+      <ul>
+        <li> Devices MUST support LocalStorage of 5 MB.</li>
+        <li> Devices MUST support SessionStorage of 5 MB.</li>
+      </ul>
+      <section>
+        <h3>URLs</h3>
+        <ul>
+          <li> Devices MUST support URLs up to a length of 2047 bytes.</li>
+          <li> Devices MUST support SessionStorage of 5 MB.</li>
+        </ul>
+   </section>
+   <section class="informative">
       <h2>Web Media APIs proposed to be supported on all platforms</h2>
       <p>APIs in this section represent desired functionality that is important for web media delivery, but is not yet implemented widely enough to be Required. We encourage the following APIs be implemented on all HTML user agents as soon as possible. It is expected that, as implementations become available, some of these specifications may become Required Specifications in a future version of this specification.</p>
       <section>
