@@ -25,9 +25,11 @@
           companyURL: "https://www.bbc.co.uk/rd"
         }],
         github: "https://github.com/w3c/webmediaapi",
-        shortName: "dahut",
+        shortName: "WMAS2018",
         wg: "Web Media API Community Group",
         wgURI: "https://www.w3.org/community/webmediaapi/",
+        testSuiteURI: "https://webapitests2018.ctawave.org",
+        copyrightStart: 2016,
       };
     </script>
   </head>
@@ -82,17 +84,14 @@
         <p>Devices MUST be conforming implementations of the following specifications:</p>
         <ul>
           <li> HTML 5.2 [[!HTML52]]</li>
-            <ul><li>Note: Must support the conformance class <code>Web browsers and other interactive user agents</code>.</li></ul>
+            <ul><li>Note: Must support the conformance class <b>Web browsers and other interactive user agents</b>.</li></ul>
           <li> ECMAScript Language Specification, Edition 6 [[!ECMASCRIPT-6.0]]</li>
           <li> W3C DOM 4.1 [[!DOM41]]</li>
         </ul>
       </section>
       <section>
         <h3>CSS specifications</h3>
-        <p class="ednote">
-        The following list of widely deployed and interoperable CSS specs is taken directly from CSS Snapshot 2017 [[CSS-2017]]
-        </p>
-        <p>Devices MUST be conforming implementations of the following specifications:</p>
+        <p>Devices MUST be conforming implementations of the following specifications (CSS Snapshot 2017 [[CSS-2017]]):</p>
         <ul>
           <li> Cascading Style Sheets Level 2 Revision 1 (CSS 2.1) Specification [[!CSS2]]</li>
           <li> CSS Syntax Module Level 3 [[!CSS-SYNTAX-3]]</li>
@@ -126,7 +125,7 @@
           <li> Encrypted Media Extensions [[!ENCRYPTED-MEDIA]]</li>
           <li> Media Source Extensions [[!MEDIA-SOURCE]]</li>
           <li> Web Audio API [[!WEBAUDIO]]</li>
-            <ul><li>Exceptions: Since not all environments currently support Media Streams [[mediacapture-streams]], <code>MediaStreamAudioSourceNode</code> and <code>MediaStreamAudioDestinationNode</code> are not  yet widely supported.</li></ul>
+            <ul><li>Exceptions: Since not all environments currently support Media Streams [[MEDIACAPTURE-STREAMS]], <a href="https://www.w3.org/TR/webaudio/#mediastreamaudiosourcenode"><code>MediaStreamAudioSourceNode</code></a> and <a href="https://www.w3.org/TR/webaudio/#mediastreamaudiodestinationnode"><code>MediaStreamAudioDestinationNode</code></a> are not  yet widely supported.</li></ul>
             <li> Scalable Vector Graphics (SVG) 1.1 (Second Edition) [[!SVG11]]</li>
           </li>
         </ul>
@@ -136,7 +135,7 @@
         <p>Devices MUST be conforming implementations of the following specifications:</p>
         <ul>
           <li> HTML Canvas 2D Context [[!2DCONTEXT]]</li>
-          <li> Fullscreen API Standard [[!WHATWG-FULLSCREEN]]</li>
+          <li> Fullscreen API Standard [[!FULLSCREEN]]</li>
           <li> JPEG File Interchange Format [[!JPEG]]</li>
           <li> Portable Network Graphics (PNG) Specification (Second Edition) [[!PNG]]</li>
           <li> Graphics Interchange Format [[!GIF]]</li>
@@ -165,7 +164,7 @@
         <p>Devices MUST be conforming implementations of the following specifications:</p>
         <ul>
           <li> Content Security Policy Level 2 [[!CSP2]]</li>
-          <li> Web Cryptography API [[!WebCryptoAPI]]</li>
+          <li> Web Cryptography API [[!WEBCRYPTOAPI]]</li>
         </ul>
       </section>
       <section>
@@ -174,17 +173,17 @@
         <ul>
           <li> Web Storage [[!WEBSTORAGE]]</li>
           <li> Web Workers [[!WORKERS]]</li>
-            <ul><li>Exceptions: <a href="https://www.w3.org/TR/workers/#shared-workers-and-the-sharedworker-interface">Shared Workers</a> are not yet widely supported.</li></ul>
+            <ul><li>Exceptions: <a href="https://www.w3.org/TR/workers/#shared-workers-and-the-sharedworker-interface"><code>SharedWorker</code></a> is not yet widely supported.</li></ul>
           </li>
           <li> Service Workers 1 [[!SERVICE-WORKERS-1]]</li>
-          <li> Indexed Database API [[!IndexedDB-20150108]]</li>
-            <ul><li>Exceptions: Array <a href="https://www.w3.org/TR/2015/REC-IndexedDB-20150108/#dfn-key-path">key path</a> and array <a href="https://www.w3.org/TR/2015/REC-IndexedDB-20150108/#dfn-key">keys</a> are not yet widely supported.</li></ul>
+          <li> Indexed Database API [[!INDEXEDDB]]</li>
+            <ul><li>Exceptions: array <a href="https://www.w3.org/TR/IndexedDB/#key-path"><code>keyPath</code></a> and <a href="https://www.w3.org/TR/IndexedDB/#array-key"><code>array key</code></a> are not yet widely supported.</li></ul>
           </li>
           <li> Cross-document messaging [[!HTML]] <a href="https://html.spec.whatwg.org/multipage/comms.html#web-messaging">(Cross-document messaging</a> section)</li>
           <li> Channel messaging [[!HTML]] <a href="https://html.spec.whatwg.org/multipage/comms.html#channel-messaging">(Channel messaging</a> section)</li>
           <li> Notifications API [[!NOTIFICATIONS]]</li>
           <li> UI Events [[!UIEVENTS]]</li>
-          <li> File API [[!FileAPI]]</li>
+          <li> File API [[!FILEAPI]]</li>
             <ul><li>Exception: <a href="https://www.w3.org/TR/FileAPI/#file-constructor"><code>File</code></a> constructor is not yet widely supported.</li></ul>
         </ul>
       </section>
@@ -224,7 +223,7 @@
         <h3>Media specifications</h3>
         <ul>
           <li> Sourcing In-band Media Resource Tracks from Media Containers into HTML [[INBANDTRACKS]]</li>
-          <li> Media Fragments URI 1.0 (basic) [[media-frags]]</li>
+          <li> Media Fragments URI 1.0 (basic) [[MEDIA-FRAGS]]</li>
           <li> Media Session Standard [[MEDIASESSION]]</li>
         </ul>
       </section>
@@ -237,7 +236,7 @@
       <section>
         <h3> Other web specifications</h3>
         <ul>
-          <li> Web App Manifest [[appmanifest]]</li>
+          <li> Web App Manifest [[APPMANIFEST]]</li>
         </ul>
       </section>
     </section>
