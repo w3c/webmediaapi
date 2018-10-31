@@ -46,7 +46,8 @@
     <section>
       <h3>Out-of-date browsers</h3>
       <p>While browsers integrated into consumer products are often built from the same major HTML user agent code bases as PC browsers, it is not unusual for a consumer product to be using a code base release that is three or more years old, while PC browsers use recent code base releases. Furthermore, browsers on consumer products are often infrequently updated, if ever. This results in very different web API support across devices.</p>
-      <p>This specification is intended to address this problem by listing key specifications used by media web apps that are all supported in common by all of the four major web user agent code bases at the time of publication. The specification will then be used to generate a test suite. The specification and test suite enable device manufacturers to specify and verify that their browsers are up-to-date with current web standards. The specification and tests can also be used to verify updates to browsers in the field.</p>
+      <p>This specification is intended to address this problem by listing key specifications used by media web apps that are all supported in common by all of the four major web user agent code bases at the time of publication. The specification will then be used to generate a test suite. The versions of each of the four code bases used to generate the test suite are listed on the front page of the test suite. (See Test Suite URL above.)</p>
+      <p>The specification and test suite enable device manufacturers to specify and verify that their browsers are up-to-date with current web standards at the time of product release. The specification and tests can also be used to verify updates to browsers in the field.</p>
       <p>Note that this specification is not defining a subset or profile to be used in place of the full Web platform. There are additional specifications that are included in all code bases that are not included in this specification. Furthermore, individual code bases include APIs that are not supported on all other code bases, but are nonetheless widely used. Therefore, this specification and associated tests should only be used as verification of a minimum set of current APIs. There is no suggestion that APIs not included in this specification should be removed from implementations.</p>
       <p>It is intended that this specification be updated periodically to reflect adoption of new specifications in the Web platform. For example, the specification might be updated once a year for media devices being introduced onto the market in the following year.</p>
     </section>
@@ -83,10 +84,17 @@
         <h3>HTML core specifications</h3>
         <p>Devices MUST be conforming implementations of the following specifications:</p>
         <ul>
-          <li> HTML 5.2 [[!HTML52]]</li>
-            <ul><li>Note: Must support the conformance class <b>Web browsers and other interactive user agents</b>.</li></ul>
+          <li> HTML [[!HTML]]</li>
+            <ul>
+              <li>Note: Must support the conformance class <b>Web browsers and other interactive user agents</b>.</li>
+              <li>Exceptions:
+                <ul>
+                  <li><a href="https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events">Server-Sent Events</a> are not yet widely supported.</li>
+                  <li><a href="https://html.spec.whatwg.org/multipage/workers.html#shared-workers-and-the-sharedworker-interface"><code>SharedWorker</code></a> is not yet widely supported.</li>
+               </ul>
+            </ul>
           <li> ECMAScript Language Specification, Edition 6 [[!ECMASCRIPT-6.0]]</li>
-          <li> W3C DOM 4.1 [[!DOM41]]</li>
+          <li> DOM [[!DOM]]</li>
         </ul>
       </section>
       <section>
@@ -125,8 +133,8 @@
           <li> Encrypted Media Extensions [[!ENCRYPTED-MEDIA]]</li>
           <li> Media Source Extensions [[!MEDIA-SOURCE]]</li>
           <li> Web Audio API [[!WEBAUDIO]]</li>
-            <ul><li>Exceptions: Since not all environments currently support Media Streams [[MEDIACAPTURE-STREAMS]], <a href="https://www.w3.org/TR/webaudio/#mediastreamaudiosourcenode"><code>MediaStreamAudioSourceNode</code></a> and <a href="https://www.w3.org/TR/webaudio/#mediastreamaudiodestinationnode"><code>MediaStreamAudioDestinationNode</code></a> are not  yet widely supported.</li></ul>
-            <li> Scalable Vector Graphics (SVG) 1.1 (Second Edition) [[!SVG11]]</li>
+            <ul><li>Exceptions: Since not all environments currently support Media Streams [[MEDIACAPTURE-STREAMS]], <a href="https://www.w3.org/TR/webaudio/#mediastreamaudiosourcenode"><code>MediaStreamAudioSourceNode</code></a> and <a href="https://www.w3.org/TR/webaudio/#mediastreamaudiodestinationnode"><code>MediaStreamAudioDestinationNode</code></a> are not yet widely supported.</li></ul>
+          <li> Scalable Vector Graphics (SVG) 1.1 (Second Edition) [[!SVG11]]</li>
           </li>
         </ul>
       </section>
@@ -154,9 +162,9 @@
         <h3>Networking specifications</h3>
         <p>Devices MUST be conforming implementations of the following specifications:</p>
         <ul>
-          <li> Web Sockets [[!HTML]] <a href="https://html.spec.whatwg.org/multipage/comms.html#network">(Web Sockets</a> section)</li>
           <li> XMLHttpRequest [[!XHR]]</li>
           <li> Fetch [[!FETCH]]</li>
+          <li>Note: Web sockets is also required as part of the HTML specification [HTML].</li>
         </ul>
       </section>
       <section>
@@ -171,20 +179,15 @@
         <h3> Other web specifications</h3>
         <p>Devices MUST be conforming implementations of the following specifications:</p>
         <ul>
-          <li> Web Storage [[!WEBSTORAGE]]</li>
-          <li> Web Workers [[!WORKERS]]</li>
-            <ul><li>Exceptions: <a href="https://www.w3.org/TR/workers/#shared-workers-and-the-sharedworker-interface"><code>SharedWorker</code></a> is not yet widely supported.</li></ul>
-          </li>
           <li> Service Workers 1 [[!SERVICE-WORKERS-1]]</li>
           <li> Indexed Database API [[!INDEXEDDB]]</li>
             <ul><li>Exceptions: array <a href="https://www.w3.org/TR/IndexedDB/#key-path"><code>keyPath</code></a> and <a href="https://www.w3.org/TR/IndexedDB/#array-key"><code>array key</code></a> are not yet widely supported.</li></ul>
           </li>
-          <li> Cross-document messaging [[!HTML]] <a href="https://html.spec.whatwg.org/multipage/comms.html#web-messaging">(Cross-document messaging</a> section)</li>
-          <li> Channel messaging [[!HTML]] <a href="https://html.spec.whatwg.org/multipage/comms.html#channel-messaging">(Channel messaging</a> section)</li>
           <li> Notifications API [[!NOTIFICATIONS]]</li>
           <li> UI Events [[!UIEVENTS]]</li>
           <li> File API [[!FILEAPI]]</li>
             <ul><li>Exception: <a href="https://www.w3.org/TR/FileAPI/#file-constructor"><code>File</code></a> constructor is not yet widely supported.</li></ul>
+            <li>Note: Cross-document messaging, Channel messaging, Web storage and Web workers are also required as part of the HTML specification [HTML].</li>
         </ul>
       </section>
     </section>
@@ -225,12 +228,6 @@
           <li> Sourcing In-band Media Resource Tracks from Media Containers into HTML [[INBANDTRACKS]]</li>
           <li> Media Fragments URI 1.0 (basic) [[MEDIA-FRAGS]]</li>
           <li> Media Session Standard [[MEDIASESSION]]</li>
-        </ul>
-      </section>
-      <section>
-        <h3>Networking specifications</h3>
-        <ul>
-          <li> Server-Sent Events [[EVENTSOURCE]]</li>
         </ul>
       </section>
       <section>
