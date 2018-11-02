@@ -30,32 +30,33 @@
         wgURI: "https://www.w3.org/community/webmediaapi/",
         testSuiteURI: "https://webapitests2018.ctawave.org",
         copyrightStart: 2016,
+        additionalCopyrightHolders: "Consumer Technology Association",
       };
     </script>
   </head>
   <body>
     <section id="abstract">
-      <p>This specification lists the Web APIs to support media web apps that are supported across all four of the most widely used user agent code bases at the time of publication. This specification should be updated at least annually to keep pace with the evolving Web platform. We encourage manufacturers to develop products that support the APIs in the most recent version of Web Media API Snapshot. This specification is comprised of references to existing specifications in W3C and other specification groups. The target devices will include any device that runs a modern HTML user agent, including televisions, game machines, set-top boxes, mobile devices and personal computers.</p>
-      <p>This specification is being developed as part of the <a href="http://cta.tech/WAVE">CTA WAVE Project</a>.</p>
+      <p>This specification lists the web APIs to support media web apps that are supported across all four of the most widely used user agent code bases at the time of publication. This specification should be updated at least annually to keep pace with the evolving web platform. We encourage manufacturers to develop products that support the APIs in the most recent version of Web Media API Snapshot. This specification is comprised of references to existing specifications in W3C and other specification groups. The target devices will include any device that runs a modern HTML user agent, including televisions, game machines, set-top boxes, mobile devices and personal computers.</p>
+      <p>This specification is being developed as part of the <a href="http://cta.tech/WAVE"><abbr title="Consumer Technology Association">CTA</abbr> <abbr title="Web Application Video Ecosystem">WAVE</abbr> Project</a>.</p>
     </section>
     <section id="sotd">
     </section>
     <section class="informative">
       <h2>Introduction</h2>
-      <p>Writing portable media web apps across browsers on consumer products (e.g. smart TVs, game machines, set-top boxes) is much more difficult than writing portable media web apps across PC browsers. Two main reasons for this are that the browsers on consumer products are often quite out-of-date and that they often have integration issues.</p>
+      <p>Writing portable media web apps across browsers on consumer products (e.g. smart TVs, game machines, set-top boxes) is much more difficult than writing portable media web apps across personal computer browsers. Two main reasons for this are that the browsers on consumer products are often quite out-of-date and that they often have integration issues.</p>
     <section>
       <h3>Out-of-date browsers</h3>
-      <p>While browsers integrated into consumer products are often built from the same major HTML user agent code bases as PC browsers, it is not unusual for a consumer product to be using a code base release that is three or more years old, while PC browsers use recent code base releases. Furthermore, browsers on consumer products are often infrequently updated, if ever. This results in very different web API support across devices.</p>
-      <p>This specification is intended to address this problem by listing key specifications used by media web apps that are all supported in common by all of the four major web user agent code bases at the time of publication. The specification will then be used to generate a test suite. The versions of each of the four code bases used to generate the test suite are listed on the front page of the test suite. (See Test Suite URL above.)</p>
-      <p>The specification and test suite enable device manufacturers to specify and verify that their browsers are up-to-date with current web standards at the time of product release. The specification and tests can also be used to verify updates to browsers in the field.</p>
-      <p>Note that this specification is not defining a subset or profile to be used in place of the full Web platform. There are additional specifications that are included in all code bases that are not included in this specification. Furthermore, individual code bases include APIs that are not supported on all other code bases, but are nonetheless widely used. Therefore, this specification and associated tests should only be used as verification of a minimum set of current APIs. There is no suggestion that APIs not included in this specification should be removed from implementations.</p>
-      <p>It is intended that this specification be updated periodically to reflect adoption of new specifications in the Web platform. For example, the specification might be updated once a year for media devices being introduced onto the market in the following year.</p>
+      <p>While browsers integrated into consumer products are often built from the same major HTML user agent code bases as personal computer browsers, it is not unusual for a consumer product to be using a code base release that is three or more years old, while personal computer browsers use recent code base releases. Furthermore, browsers on consumer products are often infrequently updated, if ever. This results in very different web API support across devices.</p>
+      <p>This specification is intended to address this problem by listing key specifications used by media web apps that are all supported in common by all of the four major web user agent code bases at the time of publication. The specification will then be used to generate a test suite. The versions of each of the four code bases used to generate the test suite are listed on the front page of the test suite. (See Test suite URL above.)</p>
+      <p>The specification and test suite enable device manufacturers to specify and verify that their browsers are up-to-date with current web standards at the time of product release. The specification and tests can also be used to specify and verify updates to browsers in the field.</p>
+      <p>Note that this specification is not defining a subset or profile to be used in place of the full web platform. There are additional specifications that are included in all code bases that are not included in this specification. Furthermore, individual code bases include APIs that are not supported on all other code bases, but are nonetheless widely used. Therefore, this specification and associated tests should only be used as verification of a minimum set of current APIs. There is no suggestion that APIs not included in this specification should be removed from implementations.</p>
+      <p>It is intended that this specification be updated periodically to reflect adoption of new specifications in the web platform. For example, the specification might be updated once a year for media devices being introduced onto the market in the following year.</p>
     </section>
     <section>
       <h3>Integration issues</h3>
       <p>There are many issues during integration of a web user agent with a hardware device that can affect the operation of web APIs. For example, if insufficient memory is allocated for cookies, they won’t function as intended.</p>
-      <p>To address this issue, this specification includes a list of target values for several APIs which are known to have been impacted by integration issues. There will also be a test suite to verify these values are supported on a device.</p>
-      <p>Note that these values are not mandated by any web standards, but are based on measurement of values supported by popular browsers. Supporting these values should provide better interoperability of web applications with PC and mobile browsers. Manufacturers may choose to exceed these values based on their expected application environments.</p>
+      <p>To address this issue, this specification includes a list of target values for several APIs which are known to have been impacted by integration issues. There will also be a test suite to verify these values are supported on a device. It is expected that additional integration requirements will be added in future updates.</p>
+      <p>Note that these values are not mandated by any web standards, but are based on measurement of values supported by popular browsers. Supporting these values should provide better interoperability of web applications with personal computer and mobile browsers. Manufacturers may choose to exceed these values based on their expected application environments.</p>
     </section>
   </section>
     <section id="conformance">
@@ -64,8 +65,8 @@
       <h2>Web Media APIs currently supported on all platforms</h2>
       <section class="informative">
         <h2>Introduction</h2>
-        <p>This section lists the Web APIs to support media web apps that are supported across all four of the most widely used user agent code bases at the time of publication (though there are no requirements around explicit version number or release date for any client code bases). We encourage manufacturers to develop products that support the APIs in the most recent version of this specification.</p>
-        <p>The approach taken in this draft is only to include specifications that are of particular significance to authors, but not include all the specifications cited by those included specifications. For example, HTTP is required by the HTML spec and is therefore not included as a required specification here.</p>
+        <p>This section lists the web APIs to support media web apps that are supported across all four of the most widely used user agent code bases at the time of publication. We encourage manufacturers to develop products that support the APIs in the most recent version of this specification.</p>
+        <p>The approach taken in this draft is only to include specifications that are of particular significance to authors, but not include all the specifications cited by those included specifications. For example, HTTP is required by the HTML spec and is therefore not included here.</p>
         <section>
           <h3>Features with limited implementation</h3>
           <p>Parts of some web specifications are not currently implemented across all user agent code bases and may never be. Consequently, these features will not be included in our tests. Any such features are noted as exceptions under that API.</p>
@@ -77,14 +78,16 @@
       </section>
       <section>
         <h3>Client code updates</h3>
-        <p>The W3C Technical Architecture Group released a finding called <a href="https://www.w3.org/2001/tag/doc/evergreen-web/">The Evergreen Web</a> which strongly recommends that "Browsers must be regularly updated, especially to fix security and interoperability bugs — ideally with an automatic, secure update mechanism."</p>
+        <p>The W3C Technical Architecture Group released a finding called <a href="https://www.w3.org/2001/tag/doc/evergreen-web/">The Evergreen web</a> which strongly recommends that "Browsers must be regularly updated, especially to fix security and interoperability bugs — ideally with an automatic, secure update mechanism."</p>
         <p>Devices SHOULD regularly update their browsers, preferably automatically.</p>
       </section>
       <section>
-        <h3>HTML core specifications</h3>
+        <h3>Core web specifications</h3>
         <p>Devices MUST be conforming implementations of the following specifications:</p>
         <ul>
-          <li> HTML [[!HTML]]</li>
+          <li>DOM [[!DOM]]</li>
+          <li>ECMAScript Language Specification, Edition 6 [[!ECMASCRIPT-6.0]]</li>
+          <li>HTML [[!HTML]]</li>
             <ul>
               <li>Note: Must support the conformance class <b>Web browsers and other interactive user agents</b>.</li>
               <li>Exceptions:
@@ -93,148 +96,156 @@
                   <li><a href="https://html.spec.whatwg.org/multipage/workers.html#shared-workers-and-the-sharedworker-interface"><code>SharedWorker</code></a> is not yet widely supported.</li>
                </ul>
             </ul>
-          <li> ECMAScript Language Specification, Edition 6 [[!ECMASCRIPT-6.0]]</li>
-          <li> DOM [[!DOM]]</li>
         </ul>
       </section>
       <section>
         <h3>CSS specifications</h3>
         <p>Devices MUST be conforming implementations of the following specifications (CSS Snapshot 2017 [[CSS-2017]]):</p>
         <ul>
-          <li> Cascading Style Sheets Level 2 Revision 1 (CSS 2.1) Specification [[!CSS2]]</li>
-          <li> CSS Syntax Module Level 3 [[!CSS-SYNTAX-3]]</li>
-          <li> CSS Style Attributes [[!CSS-STYLE-ATTR]]</li>
-          <li> Media Queries [[!CSS3-MEDIAQUERIES]]</li>
-          <li> CSS Conditional Rules Module Level 3 [[!CSS3-CONDITIONAL]]</li>
-          <li> CSS Namespaces Module Level 3 [[!CSS-NAMESPACES-3]]</li>
-          <li> Selectors Level 3 [[!SELECT]]</li>
-          <li> CSS Cascading and Inheritance Level 3 [[!CSS-CASCADE-3]]</li>
-          <li> CSS Values and Units Module Level 3 [[!CSS-VALUES]]</li>
-          <li> CSS Color Module Level 3 [[!CSS3-COLOR]]</li>
-          <li> CSS Backgrounds and Borders Module Level 3 [[!CSS3-BACKGROUND]]</li>
-          <li> CSS Image Values and Replaced Content Module Level 3 [[!CSS3-IMAGES]]</li>
-          <li> CSS Fonts Module Level 3 [[!CSS-FONTS-3]]</li>
-          <li> CSS Multi-column Layout Module [[!CSS3-MULTICOL]]</li>
-          <li> CSS Basic User Interface Module Level 3 (CSS3 UI) [[!CSS-UI-3]]</li>
-          <li> Compositing and Blending Level 1 [[!COMPOSITING]]</li>
-          <li> CSS Transitions [[!CSS3-TRANSITIONS]]</li>
-          <li> CSS Animations [[!CSS3-ANIMATIONS]]</li>
-          <li> CSS Flexible Box Layout Module Level 1 [[!CSS-FLEXBOX-1]]</li>
-          <li> CSS Transforms Module Level 1 [[!CSS-TRANSFORMS-1]]</li>
-          <li> CSSOM View Module [[!CSSOM-VIEW]]</li>
-          <li> CSS Writing Modes Level 3 [[!CSS-WRITING-MODES-3]]</li>
-            <ul><li>Exception: <a href="https://www.w3.org/TR/css-writing-modes-3/#text-orientation"><code>text-orientation</code></a> property is not yet widely supported.</li></ul>
+          <li>Cascading Style Sheets Level 2 Revision 1 (CSS 2.1) Specification [[!CSS2]]</li>
+          <li>Compositing and Blending Level 1 [[!COMPOSITING]]</li>
+          <li>CSS Animations [[!CSS3-ANIMATIONS]]</li>
+          <li>CSS Backgrounds and Borders Module Level 3 [[!CSS3-BACKGROUND]]</li>
+          <li>CSS Basic User Interface Module Level 3 (CSS3 UI) [[!CSS-UI-3]]</li>
+          <li>CSS Cascading and Inheritance Level 3 [[!CSS-CASCADE-3]]</li>
+          <li>CSS Color Module Level 3 [[!CSS3-COLOR]]</li>
+          <li>CSS Conditional Rules Module Level 3 [[!CSS3-CONDITIONAL]]</li>
+          <li>CSS Flexible Box Layout Module Level 1 [[!CSS-FLEXBOX-1]]</li>
+          <li>CSS Fonts Module Level 3 [[!CSS-FONTS-3]]</li>
+          <li>CSS Image Values and Replaced Content Module Level 3 [[!CSS3-IMAGES]]</li>
+          <li>CSS Multi-column Layout Module [[!CSS3-MULTICOL]]</li>
+          <li>CSS Namespaces Module Level 3 [[!CSS-NAMESPACES-3]]</li>
+          <li>CSS Style Attributes [[!CSS-STYLE-ATTR]]</li>
+          <li>CSS Syntax Module Level 3 [[!CSS-SYNTAX-3]]</li>
+          <li>CSS Transforms Module Level 1 [[!CSS-TRANSFORMS-1]]</li>
+          <li>CSS Transitions [[!CSS3-TRANSITIONS]]</li>
+          <li>CSS Values and Units Module Level 3 [[!CSS-VALUES]]</li>
+          <li>CSS Writing Modes Level 3 [[!CSS-WRITING-MODES-3]]</li>
+            <ul>
+              <li>Exception: <a href="https://www.w3.org/TR/css-writing-modes-3/#text-orientation"><code>text-orientation</code></a> property is not yet widely supported.</li>
+            </ul>
+          <li>CSSOM View Module [[!CSSOM-VIEW]]</li>
+          <li>Media Queries [[!CSS3-MEDIAQUERIES]]</li>
+          <li>Selectors Level 3 [[!SELECT]]</li>
         </ul>
       </section>
       <section>
         <h3>Media specifications</h3>
         <p>Devices MUST be conforming implementations of the following specifications:</p>
         <ul>
-          <li> Encrypted Media Extensions [[!ENCRYPTED-MEDIA]]</li>
-          <li> Media Source Extensions [[!MEDIA-SOURCE]]</li>
-          <li> Web Audio API [[!WEBAUDIO]]</li>
-            <ul><li>Exceptions: Since not all environments currently support Media Streams [[MEDIACAPTURE-STREAMS]], <a href="https://www.w3.org/TR/webaudio/#mediastreamaudiosourcenode"><code>MediaStreamAudioSourceNode</code></a> and <a href="https://www.w3.org/TR/webaudio/#mediastreamaudiodestinationnode"><code>MediaStreamAudioDestinationNode</code></a> are not yet widely supported.</li></ul>
-          <li> Scalable Vector Graphics (SVG) 1.1 (Second Edition) [[!SVG11]]</li>
-          </li>
+          <li>Encrypted Media Extensions [[!ENCRYPTED-MEDIA]]</li>
+          <li>Media Source Extensions [[!MEDIA-SOURCE]]</li>
+          <li>Scalable Vector Graphics (SVG) 1.1 (Second Edition) [[!SVG11]]</li>
+          <li>Web Audio API [[!WEBAUDIO]]</li>
+            <ul>
+              <li>Exceptions: Since not all environments currently support Media Streams [[MEDIACAPTURE-STREAMS]], <a href="https://www.w3.org/TR/webaudio/#mediastreamaudiosourcenode"><code>MediaStreamAudioSourceNode</code></a> and <a href="https://www.w3.org/TR/webaudio/#mediastreamaudiodestinationnode"><code>MediaStreamAudioDestinationNode</code></a> are not yet widely supported.</li>
+            </ul>
         </ul>
       </section>
       <section>
         <h3>Graphics specifications</h3>
         <p>Devices MUST be conforming implementations of the following specifications:</p>
         <ul>
-          <li> HTML Canvas 2D Context [[!2DCONTEXT]]</li>
-          <li> Fullscreen API Standard [[!FULLSCREEN]]</li>
-          <li> JPEG File Interchange Format [[!JPEG]]</li>
-          <li> Portable Network Graphics (PNG) Specification (Second Edition) [[!PNG]]</li>
-          <li> Graphics Interchange Format [[!GIF]]</li>
-          <li> WebGL Specification [[!WEBGL-103]]</li>
+          <li>Fullscreen API Standard [[!FULLSCREEN]]</li>
+          <li>Graphics Interchange Format [[!GIF]]</li>
+          <li>HTML Canvas 2D Context [[!2DCONTEXT]]</li>
+          <li>JPEG File Interchange Format [[!JPEG]]</li>
+          <li>Portable Network Graphics (PNG) Specification (Second Edition) [[!PNG]]</li>
+          <li>WebGL Specification [[!WEBGL-103]]</li>
         </ul>
       </section>
       <section>
         <h3>Font specifications</h3>
         <p>Devices MUST be conforming implementations of the following specifications:</p>
         <ul>
-          <li> Open Font Format [[!OPEN-FONT-FORMAT]]</li>
-          <li> WOFF File Format 1.0 [[!WOFF]]</li>
+          <li>Open Font Format [[!OPEN-FONT-FORMAT]]</li>
+          <li>WOFF File Format 1.0 [[!WOFF]]</li>
         </ul>
       </section>
       <section>
         <h3>Networking specifications</h3>
         <p>Devices MUST be conforming implementations of the following specifications:</p>
         <ul>
-          <li> XMLHttpRequest [[!XHR]]</li>
-          <li> Fetch [[!FETCH]]</li>
-          <li>Note: Web sockets is also required as part of the HTML specification [HTML].</li>
+          <li>Fetch [[!FETCH]]</li>
+          <li>XMLHttpRequest [[!XHR]]</li>
+          <li>Note: Web sockets is also required as part of the HTML specification [[!HTML]].</li>
         </ul>
       </section>
       <section>
         <h3>Security specifications</h3>
         <p>Devices MUST be conforming implementations of the following specifications:</p>
         <ul>
-          <li> Content Security Policy Level 2 [[!CSP2]]</li>
-          <li> Web Cryptography API [[!WEBCRYPTOAPI]]</li>
+          <li>Content Security Policy Level 2 [[!CSP2]]</li>
+          <li>Web Cryptography API [[!WEBCRYPTOAPI]]</li>
         </ul>
       </section>
       <section>
-        <h3> Other web specifications</h3>
+        <h3>Other web specifications</h3>
         <p>Devices MUST be conforming implementations of the following specifications:</p>
         <ul>
-          <li> Service Workers 1 [[!SERVICE-WORKERS-1]]</li>
-          <li> Indexed Database API [[!INDEXEDDB]]</li>
+          <li>Indexed Database API [[!INDEXEDDB]]</li>
             <ul><li>Exceptions: array <a href="https://www.w3.org/TR/IndexedDB/#key-path"><code>keyPath</code></a> and <a href="https://www.w3.org/TR/IndexedDB/#array-key"><code>array key</code></a> are not yet widely supported.</li></ul>
           </li>
-          <li> Notifications API [[!NOTIFICATIONS]]</li>
-          <li> UI Events [[!UIEVENTS]]</li>
-          <li> File API [[!FILEAPI]]</li>
+          <li>File API [[!FILEAPI]]</li>
             <ul><li>Exception: <a href="https://www.w3.org/TR/FileAPI/#file-constructor"><code>File</code></a> constructor is not yet widely supported.</li></ul>
+          <li>Notifications API [[!NOTIFICATIONS]]</li>
           <li>Page Visibility Level 2 [[!PAGE-VISIBILITY-2]]</li>
-          <li>Note: Cross-document messaging, Channel messaging, Web storage and Web workers are also required as part of the HTML specification [HTML].</li>
+          <li>Service Workers 1 [[!SERVICE-WORKERS-1]]</li>
+          <li>UI Events [[!UIEVENTS]]</li>
+          <li>Note: Cross-document messaging, Channel messaging, Web storage and Web workers are also required as part of the HTML specification [[!HTML]].</li>
         </ul>
       </section>
     </section>
-    <section id="conformance">
+    <section>
       <h2>User Agent Integration Specifications</h2>
-      <p>This section contains values for integrating a web user agent with a consumer device. The values are based on de facto requirements from browsers on personal computers and mobile devices. Supporting these integration specifications will increase interoperability with media web apps on other devices.</p>
-      <p>A test suite will evaluate client support for these specifications.</p>
+      <section class="informative">
+        <h2>Introduction</h2>
+        <p>This section contains values for integrating a web user agent with a consumer device. The values are based on de facto requirements from browsers on personal computers and mobile devices. Supporting these integration specifications will increase interoperability with media web apps on other devices.</p>
+        <p>A test suite will evaluate client support for these specifications.</p>
+      </section>
       <section>
         <h3>Cookies</h3>
         <ul>
-          <li> Devices MUST support cookies of length at least 4096 bytes.</li>
-          <li> Devices MUST support at least 20 cookies per domain.</li>
-          <li> Devices MUST support at least 100 total cookies.</li>
-          <li> Devices MUST support persistence of cookies between application sessions.</li>
-          <li> Devices MUST support persistence of cookies across power cycles of the device.</li>
+          <li>Devices MUST support cookies of length at least 4096 bytes.</li>
+          <li>Devices MUST support at least 20 cookies per domain.</li>
+          <li>Devices MUST support at least 100 total cookies.</li>
+          <li>Devices MUST support persistence of cookies between application sessions.</li>
+          <li>Devices MUST support persistence of cookies across power cycles of the device.</li>
         </ul>
       </section>
       <section>
         <h3>Storage</h3>
         <ul>
-          <li> Devices MUST support LocalStorage of at least 5 MB.</li>
-          <li> Devices MUST support SessionStorage of at least 5 MB.</li>
+          <li>Devices MUST support LocalStorage of at least 5 MB.</li>
+          <li>Devices MUST support SessionStorage of at least 5 MB.</li>
         </ul>
       </section>
       <section>
         <h3>URLs</h3>
         <ul>
-          <li> Devices MUST support URLs up to a length of 2047 bytes.</li>
+          <li>Devices MUST support URLs up to a length of 2047 bytes.</li>
         </ul>
+        </section>
       </section>
     </section>
     <section class="informative">
       <h2>Web Media APIs proposed to be supported on all platforms</h2>
-      <p>APIs in this section represent desired functionality that is important for web media delivery, but is not yet implemented widely enough to be Required. We encourage the following APIs be implemented on all HTML user agents as soon as possible. It is expected that, as implementations become available, some of these specifications may become Required Specifications in a future version of this specification.</p>
+      <section>
+        <h2>Introduction</h2>
+        <p>APIs in this section are important for web media delivery, but are not yet implemented in all four code bases. We encourage the following APIs be implemented on all HTML user agents as soon as possible. It is expected that, as implementations become available, some of these specifications may be listed as supported on all platforms in a future version of this specification.</p>
+      </section>
       <section>
         <h3>Media specifications</h3>
         <ul>
-          <li> Sourcing In-band Media Resource Tracks from Media Containers into HTML [[INBANDTRACKS]]</li>
-          <li> Media Fragments URI 1.0 (basic) [[MEDIA-FRAGS]]</li>
-          <li> Media Session Standard [[MEDIASESSION]]</li>
+          <li>Media Fragments URI 1.0 (basic) [[MEDIA-FRAGS]]</li>
+          <li>Media Session Standard [[MEDIASESSION]]</li>
+          <li>Sourcing In-band Media Resource Tracks from Media Containers into HTML [[INBANDTRACKS]]</li>
         </ul>
       </section>
       <section>
-        <h3> Other web specifications</h3>
+        <h3>Other web specifications</h3>
         <ul>
-          <li> Web App Manifest [[APPMANIFEST]]</li>
+          <li>Web App Manifest [[APPMANIFEST]]</li>
         </ul>
       </section>
     </section>
