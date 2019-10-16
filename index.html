@@ -126,7 +126,12 @@
           <li>ECMAScript Language Specification, Edition 7 [[!ECMASCRIPT-7.0]]</li>
           <li>HTML [[!HTML]]
             <ul>
-              <li>Note: Must support the conformance class <b>Web browsers and other interactive user agents</b>.</li>
+              <li>Devices MUST support the conformance class <b><a href="https://html.spec.whatwg.org/multipage/infrastructure.html#interactive">Web browsers and other interactive user agents</a></b>.</li>
+              <li>Devices MUST support a mechanism to construct instances of <a href="https://html.spec.whatwg.org/multipage/media.html#text-track-cue">TextTrackCue</a> or an interface that inherits from it.
+                <ul>
+                  <li>Note: Current user agent implementations meet this requirement either by supporting <a href="https://w3c.github.io/webvtt/#vttcue">VTTCue</a> or by supporting a constructor for <a href="https://html.spec.whatwg.org/multipage/media.html#text-track-cue">TextTrackCue</a> that is no longer included in the HTML specification [[!HTML]].</li>
+                </ul>
+              </li>
               <li>Exceptions:
                 <ul>
                   <li><a href="https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events">Server-Sent Events</a> are not yet widely supported.</li>
