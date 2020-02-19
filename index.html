@@ -318,7 +318,12 @@
           </li>
           <li>File API [[!FILEAPI]]
             <ul><li>Exception: <a href="https://www.w3.org/TR/FileAPI/#file-constructor"><code>File</code></a> constructor is not yet widely supported.</li></ul>
-          <li>Notifications API [[!NOTIFICATIONS]]</li>
+          </li>
+          <li>Notifications API [[!NOTIFICATIONS]]
+            <ul><li>Exception: it is possible for the user agent to support the Notifications API, but the operating system and/or device platform does not support a system to display notifications. In this scenario, it is critical that the current recommendations for feature detection of the Notifications API do not cause an error when run on the device.
+              <ul><li>Note: best practices regarding feature detection of Notifications API capabilities are discussed in <a href="https://github.com/whatwg/notifications/issues/116">Notifications API GitHub Issue #116</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">"Using the Notifications API" guide from MDN</a>.</li></ul>
+            </li></ul>
+          </li>
           <li>Page Visibility Level 2 [[!PAGE-VISIBILITY-2]]</li>
           <li>Service Workers 1 [[!SERVICE-WORKERS-1]]</li>
           <li>UI Events [[!UIEVENTS]]</li>
