@@ -203,11 +203,7 @@
                   <li>Note: Current user agent implementations meet this requirement either by supporting <a href="https://w3c.github.io/webvtt/#vttcue">VTTCue</a> or by supporting a constructor for <a href="https://html.spec.whatwg.org/multipage/media.html#text-track-cue">TextTrackCue</a> that is no longer included in the HTML specification [[!HTML]].</li>
                 </ul>
               </li>
-              <li>Exceptions:
-                <ul>
-                  <li><a href="https://html.spec.whatwg.org/multipage/server-sent-events.html#server-sent-events">Server-Sent Events</a> are not yet widely supported.</li>
-                  <li><a href="https://html.spec.whatwg.org/multipage/workers.html#shared-workers-and-the-sharedworker-interface"><code>SharedWorker</code></a> is not yet widely supported.</li>
-               </ul>
+              <li>Exception: <a href="https://html.spec.whatwg.org/multipage/workers.html#shared-workers-and-the-sharedworker-interface"><code>SharedWorker</code></a> is not yet widely supported.</li>
             </ul>
           </li>
         </ul>
@@ -329,12 +325,8 @@
         <h3>Other web specifications</h3>
         <p>Devices MUST be conforming implementations of the following specifications:</p>
         <ul>
-          <li>Indexed Database API [[!INDEXEDDB]]
-            <ul><li>Exceptions: array <a href="https://www.w3.org/TR/IndexedDB/#key-path"><code>keyPath</code></a> and <a href="https://www.w3.org/TR/IndexedDB/#array-key"><code>array key</code></a> are not yet widely supported.</li></ul>
-          </li>
-          <li>File API [[!FILEAPI]]
-            <ul><li>Exception: <a href="https://www.w3.org/TR/FileAPI/#file-constructor"><code>File</code></a> constructor is not yet widely supported.</li></ul>
-          </li>
+          <li>Indexed Database API [[!INDEXEDDB]]</li>
+          <li>File API [[!FILEAPI]]</li>
           <li>Notifications API [[!NOTIFICATIONS]]
             <ul><li>Exception: it is possible for the user agent to support the Notifications API, but the operating system and/or device platform does not support a system to display notifications. In this scenario, it is critical that the current recommendations for feature detection of the Notifications API do not cause an error when run on the device.
               <ul><li>Note: best practices regarding feature detection of Notifications API capabilities are discussed in <a href="https://github.com/whatwg/notifications/issues/116">Notifications API GitHub Issue #116</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/API/Notifications_API/Using_the_Notifications_API">"Using the Notifications API" guide from MDN</a>.</li></ul>
