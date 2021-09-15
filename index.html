@@ -250,7 +250,11 @@
               <li>Exception: <a href="https://www.w3.org/TR/css-text-decor-3/#emphasis-marks"><code>emphasis marks</code></a> properties are not yet widely supported.</li>
             </ul>
           </li>
-          <li>CSS Transforms Module Level 1 [[!CSS-TRANSFORMS-1]]</li>
+          <li>CSS Transforms Module Level 1 [[!CSS-TRANSFORMS-1]]
+            <ul>
+              <li>Exception: applying CSS transform functions to <code>video</code> elements is not required to be supported. More complex requirements such as <a href="https://www.w3.org/TR/css-transforms-1/#funcdef-transform-rotate">2D rotate</a>, <a href="https://www.w3.org/TR/css-transforms-1/#funcdef-transform-skew">2D skew</a> or any of the 3D transforms may not work at all or may be limited to unencrypted content and/or to HD / SD content or even to only SD content. They may also result in dropped frames.</li>
+            </ul>
+          </li>
           <li>CSS Transitions [[!CSS3-TRANSITIONS]]</li>
           <li>CSS Values and Units Module Level 3 [[!CSS-VALUES]]</li>
           <li>CSS Will Change Module Level 1 [[CSS-WILL-CHANGE-1]]</li>
