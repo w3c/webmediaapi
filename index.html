@@ -63,8 +63,8 @@
             authors: [
               "Anne van Kesteren"
             ],
-            href: "https://dom.spec.whatwg.org/review-drafts/2020-06/",
-            date: "15 June 2020",
+            href: "https://dom.spec.whatwg.org/review-drafts/2021-06/",
+            date: "21 June 2021",
             status: "Review Draft (use this version or later)",
             publisher: "WHATWG"
           },
@@ -73,8 +73,8 @@
             authors: [
               "Anne van Kesteren"
             ],
-            href: "https://fetch.spec.whatwg.org/review-drafts/2020-12/",
-            date: "24 December 2020",
+            href: "https://fetch.spec.whatwg.org/review-drafts/2021-12/",
+            date: "19 December 2021",
             status: "Review Draft (use this version or later)",
             publisher: "WHATWG"
           },
@@ -83,8 +83,8 @@
             authors: [
               "Philip Jägenstedt"
             ],
-            href: "https://fullscreen.spec.whatwg.org/review-drafts/2021-01/",
-            date: "18 January 2021",
+            href: "https://fullscreen.spec.whatwg.org/review-drafts/2022-01/",
+            date: "17 January 2022",
             status: "Review Draft (use this version or later)",
             publisher: "WHATWG"
           },
@@ -97,8 +97,8 @@
               "Philip Jägenstedt",
               "Simon Pieters"
             ],
-            href: "https://html.spec.whatwg.org/review-drafts/2021-01/",
-            date: "18 January 2021",
+            href: "https://html.spec.whatwg.org/review-drafts/2022-01/",
+            date: "17 January 2022",
             status: "Review Draft (use this version or later)",
             publisher: "WHATWG"
           },
@@ -107,8 +107,8 @@
             authors: [
               "Anne van Kesteren"
             ],
-            href: "https://notifications.spec.whatwg.org/review-drafts/2021-01/",
-            date: "18 January 2021",
+            href: "https://notifications.spec.whatwg.org/review-drafts/2022-01/",
+            date: "17 January 2022",
             status: "Review Draft (use this version or later)",
             publisher: "WHATWG"
           },
@@ -117,8 +117,8 @@
             authors: [
               "Anne van Kesteren"
             ],
-            href: "https://xhr.spec.whatwg.org/review-drafts/2021-02/",
-            date: "15 February 2021",
+            href: "https://xhr.spec.whatwg.org/review-drafts/2022-02/",
+            date: "21 February 2022",
             status: "Review Draft (use this version or later)",
             publisher: "WHATWG"
           }
@@ -214,7 +214,13 @@
                   <li>Note: Current user agent implementations meet this requirement either by supporting <a href="https://w3c.github.io/webvtt/#vttcue">VTTCue</a> or by supporting a constructor for <a href="https://html.spec.whatwg.org/multipage/media.html#text-track-cue">TextTrackCue</a> that is no longer included in the HTML specification [[!HTML]].</li>
                 </ul>
               </li>
-              <li>Exception: <a href="https://html.spec.whatwg.org/multipage/workers.html#shared-workers-and-the-sharedworker-interface"><code>SharedWorker</code></a> is not yet widely supported.</li>
+              <li>Exceptions:
+                <ul>
+                  <li><a href="https://html.spec.whatwg.org/multipage/workers.html#shared-workers-and-the-sharedworker-interface"><code>SharedWorker</code></a> is not yet widely supported.</li>
+                  <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#css-module-script">CSS module scripts</a> are not yet widely supported.</li>
+                  <li><a href="https://html.spec.whatwg.org/multipage/scripting.html#dom-script-supports"><code>HTMLScriptElement.supports(type)</code></a> is not yet widely supported.</li>
+                </ul>
+              </li>
             </ul>
           </li>
         </ul>
@@ -323,9 +329,8 @@
         <p>Devices MUST be conforming implementations of the following specifications:</p>
         <ul>
           <li>Beacon [[!BEACON]]</li>
-          <li>High Resolution Time Level 1 [[!HR-TIME-1]]</li>
+          <li>High Resolution Time [[!HR-TIME-3]]</li>
           <li>Navigation Timing [[!NAVIGATION-TIMING]]</li>
-          <li>Page Visibility Level 2 [[!PAGE-VISIBILITY-2]]</li>
           <li>Performance Timeline [[!PERFORMANCE-TIMELINE]]</li>
           <li>Resource Timing Level 1 [[!RESOURCE-TIMING-1]]</li>
           <li>User Timing Level 2 [[!USER-TIMING-2]]</li>
