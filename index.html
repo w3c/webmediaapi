@@ -273,6 +273,11 @@
           <li>Media Capabilities [[!MEDIA-CAPABILITIES]]</li>
           <li>Media Source Extensions [[!MEDIA-SOURCE]]</li>
           <li>Web Audio API [[!WEBAUDIO]]</li>
+          <li>WebRTC 1.0: Real-Time Communication Between Browsers [[!WEBRTC]]
+            <ul>
+              <li>Note: Since consumer products may not have camera and/or microphone inputs to send video and audio, WebRTC's functionality can be limited to not allow an <a href="https://www.w3.org/TR/webrtc/#dom-rtcrtptransceiverdirection"><code>RTCRtpTransceiverDirection</code></a> of "<code>sendrecv</code>" or "<code>sendonly</code>" on those devices. This also implies the <a href="https://www.w3.org/TR/webrtc/#rtcrtpsender-interface"><code>RTCRtpSender</code> interface</a> is not required to be implemented, and the Media Capture and Streams [[GETUSERMEDIA]] requirements are limited to <a href="https://www.w3.org/TR/mediacapture-streams/#dom-mediastream"><code>MediaStream</code></a>, <a href="https://www.w3.org/TR/mediacapture-streams/#dom-mediastreamtrack"><code>MediaStreamTrack</code></a>, and <a href="https://www.w3.org/TR/mediacapture-streams/#dom-mediastreamconstraints"><code>MediaStreamConstraints</code></a> as defined in Media Capture and Streams and extended by WebRTC. This enables WebRTC to be leveraged for use cases such as security camera feeds, ultra low latency live streaming, and cloud gaming.
+            </ul>
+          </li>
         </ul>
       </section>
       <section>
