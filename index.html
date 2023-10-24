@@ -131,6 +131,84 @@
             date: "20 February 2023",
             status: "Review Draft (use this version or later)",
             publisher: "WHATWG"
+          },
+          "CTA-5000": {
+            title: "Web Media API Snapshot 2017 CTA-5000",
+            authors: [
+              "David Evans",
+              "Mark Vickers"
+            ],
+            href: "https://cdn.cta.tech/cta/media/media/resources/standards/pdfs/cta-5000-final-v2_pdf.pdf",
+            date: "December 2017",
+            publisher: "Consumer Technology Association",
+            status: "CTA Specification"
+          },
+          "CTA-5000-A": {
+            title: "Web Media API Snapshot 2018 CTA-5000-A",
+            authors: [
+              "Jon Piesing",
+              "Mark Vickers"
+            ],
+            href: "https://cdn.cta.tech/cta/media/media/resources/standards/pdfs/cta-5000-a-final.pdf",
+            date: "December 2018",
+            publisher: "Consumer Technology Association",
+            status: "CTA Specification"
+          },
+          "CTA-5000-B": {
+            title: "Web Media API Snapshot 2019 CTA-5000-B",
+            authors: [
+              "John Luther",
+              "Jon Piesing",
+              "John Riviello"
+            ],
+            href: "https://cdn.cta.tech/cta/media/media/resources/standards/pdfs/cta-5000-b-final_v2.pdf",
+            date: "December 2019",
+            publisher: "Consumer Technology Association",
+            status: "CTA Specification"
+          },
+          "CTA-5000-C": {
+            title: "Web Media API Snapshot 2020 CTA-5000-C",
+            authors: [
+              "Jon Piesing",
+              "John Riviello"
+            ],
+            href: "https://cdn.cta.tech/cta/media/media/resources/standards/pdfs/cta-5000-c_final.pdf",
+            date: "December 2020",
+            publisher: "Consumer Technology Association",
+            status: "CTA Specification"
+          },
+          "CTA-5000-D": {
+            title: "Web Media API Snapshot 2021 CTA-5000-D",
+            authors: [
+              "Jon Piesing",
+              "John Riviello"
+            ],
+            href: "https://cdn.cta.tech/cta/media/media/resources/standards/pdfs/cta-5000-d-final.pdf",
+            date: "December 2021",
+            publisher: "Consumer Technology Association",
+            status: "CTA Specification"
+          },
+          "CTA-5000-E": {
+            title: "Web Media API Snapshot 2022 CTA-5000-E",
+            authors: [
+              "Jon Piesing",
+              "John Riviello"
+            ],
+            href: "https://cdn.cta.tech/cta/media/media/resources/standards/pdfs/cta-5000-e-final.pdf",
+            date: "December 2022",
+            publisher: "Consumer Technology Association",
+            status: "CTA Specification"
+          },
+          "CTA-5000-F": {
+            title: "Web Media API Snapshot 2023 CTA-5000-F",
+            authors: [
+              "Jon Piesing",
+              "John Riviello"
+            ],
+            href: "https://cdn.cta.tech/cta/media/media/resources/standards/pdfs/cta-5000-f-final.pdf",
+            date: "November 2023",
+            publisher: "Consumer Technology Association",
+            status: "CTA Specification"
           }
         }
       };
@@ -144,6 +222,22 @@
         border: none;
         text-decoration: none;
         background: transparent;
+      }
+      #wmas-bindings {
+        border-collapse: collapse;
+      }
+      #wmas-bindings th,
+      #wmas-bindings td {
+        background-color: var(--def-bg, #def);
+        border: 1px solid #999;
+        padding: 0.5rem;
+      }
+      #wmas-bindings th {
+        background-color: var(--heading-text, #005a9c);
+        color: #fff;
+      }
+      #wmas-bindings tr:nth-child(even) td {
+        background-color: var(--defrow-border, #bbd7e9);
       }
       </style>
   </head>
@@ -423,6 +517,50 @@
           <li>WebTransport [[WEBTRANSPORT]]</li>
         </ul>
       </section>
+    </section>
+    <section class="appendix">
+      <h2>Annex A: WMAS Bindings (normative)</h2>
+      <p>This annex lists Web Media API bindings assigned within the CTA namespace "<code>urn:cta</code>". These bindings may be used to signal compatibility intent or requirement for the WAVE API Snapshot identified in the binding.</p>
+      <p>See <a href="https://www.iana.org/assignments/urn-formal/cta">https://www.iana.org/assignments/urn-formal/cta</a> for the CTA namespace registration in the Official IANA Registry of URN Namespaces [[IANA-URN-NAMESPACES]].</p>
+      <p>The table below is normative within this specification. For more information on these bindings contact <a href="mailto:standards@CTA.tech">standards@CTA.tech</a>.</p>
+      <table id="wmas-bindings">
+        <thead>
+          <tr>
+            <th scope="col">CTA Identifier</th>
+            <th scope="col">Referenced Specification</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>urn:cta:wave:appinformation:standardversion:cta5000:2017</td>
+            <td>Web Media API Snapshot 2017 CTA-5000 [[CTA-5000]]</td>
+          </tr>
+          <tr>
+            <td>urn:cta:wave:appinformation:standardversion:cta5000a:2018</td>
+            <td>Web Media API Snapshot 2018 CTA-5000-A [[CTA-5000-A]]</td>
+          </tr>
+          <tr>
+            <td>urn:cta:wave:appinformation:standardversion:cta5000b:2019</td>
+            <td>Web Media API Snapshot 2019 CTA-5000-B [[CTA-5000-B]]</td>
+          </tr>
+          <tr>
+            <td>urn:cta:wave:appinformation:standardversion:cta5000c:2020</td>
+            <td>Web Media API Snapshot 2020 CTA-5000-C [[CTA-5000-C]]</td>
+          </tr>
+          <tr>
+            <td>urn:cta:wave:appinformation:standardversion:cta5000d:2021</td>
+            <td>Web Media API Snapshot 2021 CTA-5000-D [[CTA-5000-D]]</td>
+          </tr>
+          <tr>
+            <td>urn:cta:wave:appinformation:standardversion:cta5000e:2022</td>
+            <td>Web Media API Snapshot 2022 CTA-5000-E [[CTA-5000-E]]</td>
+          </tr>
+          <tr>
+            <td>urn:cta:wave:appinformation:standardversion:cta5000f:2023</td>
+            <td>Web Media API Snapshot 2023 CTA-5000-F [[CTA-5000-F]]</td>
+          </tr>
+        </tbody>
+      </table>
     </section>
     <section id="references">
       <p>For WHATWG living standards, while it is recommended that devices support the living standard, they must support the referenced review draft version of each WHATWG standard or a later commit snapshot version.</p>
