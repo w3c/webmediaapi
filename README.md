@@ -14,7 +14,8 @@ This repository contains the Web Media API Snapshot specification that is being 
 - [Web Media API Snapshot 2021](https://www.w3.org/2021/12/webmediaapi.html) was published 14 December 2021.
 - [Web Media API Snapshot 2021 (WMAS 2021) Test Suite](https://webapitests2021.ctawave.org) is available for testing devices.
 - [Web Media API Snapshot 2022](https://www.w3.org/2022/12/webmediaapi.html) was published 15 December 2022.
-- Web Media API Snapshot 2023 is planned to be published Q4 2023.
+- [Web Media API Snapshot 2023](https://www.w3.org/2023/11/webmediaapi.html) was published 06 November 2023.
+- Web Media API Snapshot 2024 is planned to be published Q4 2024.
 - [Web Media API Snapshot](https://w3c.github.io/webmediaapi/) is the latest version on the repository.
 
 The [Web Media API Community Group](https://www.w3.org/community/webmediaapi) previously maintained repositories for two other specifications that have since been deprecated:
