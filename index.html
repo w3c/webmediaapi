@@ -64,8 +64,8 @@
             authors: [
               "Anne van Kesteren"
             ],
-            href: "https://dom.spec.whatwg.org/review-drafts/2022-06/",
-            date: "20 June 2022",
+            href: "https://dom.spec.whatwg.org/review-drafts/2023-06/",
+            date: "19 June 2023",
             status: "Review Draft (use this version or later)",
             publisher: "WHATWG"
           },
@@ -74,8 +74,8 @@
             authors: [
               "Anne van Kesteren"
             ],
-            href: "https://fetch.spec.whatwg.org/review-drafts/2022-12/",
-            date: "19 December 2022",
+            href: "https://fetch.spec.whatwg.org/review-drafts/2023-12/",
+            date: "18 December 2023",
             status: "Review Draft (use this version or later)",
             publisher: "WHATWG"
           },
@@ -84,8 +84,8 @@
             authors: [
               "Philip Jägenstedt"
             ],
-            href: "https://fullscreen.spec.whatwg.org/review-drafts/2023-01/",
-            date: "16 January 2023",
+            href: "https://fullscreen.spec.whatwg.org/review-drafts/2023-07/",
+            date: "17 July 2023",
             status: "Review Draft (use this version or later)",
             publisher: "WHATWG"
           },
@@ -98,8 +98,8 @@
               "Philip Jägenstedt",
               "Simon Pieters"
             ],
-            href: "https://html.spec.whatwg.org/review-drafts/2023-01/",
-            date: "16 January 2023",
+            href: "https://html.spec.whatwg.org/review-drafts/2024-01/",
+            date: "15 January 2024",
             status: "Review Draft (use this version or later)",
             publisher: "WHATWG"
           },
@@ -108,8 +108,8 @@
             authors: [
               "Anne van Kesteren"
             ],
-            href: "https://notifications.spec.whatwg.org/review-drafts/2023-01/",
-            date: "16 January 2023",
+            href: "https://notifications.spec.whatwg.org/review-drafts/2023-07/",
+            date: "17 July 2023",
             status: "Review Draft (use this version or later)",
             publisher: "WHATWG"
           },
@@ -118,8 +118,8 @@
             authors: [
               "Adam Rice"
             ],
-            href: "https://websockets.spec.whatwg.org/review-drafts/2022-09/",
-            date: "19 September 2022",
+            href: "https://websockets.spec.whatwg.org/review-drafts/2023-09/",
+            date: "18 September 2023",
             status: "Review Draft (use this version or later)",
             publisher: "WHATWG"
           },
@@ -128,8 +128,8 @@
             authors: [
               "Anne van Kesteren"
             ],
-            href: "https://xhr.spec.whatwg.org/review-drafts/2023-02/",
-            date: "20 February 2023",
+            href: "https://xhr.spec.whatwg.org/review-drafts/2024-02/",
+            date: "19 February 2024",
             status: "Review Draft (use this version or later)",
             publisher: "WHATWG"
           },
@@ -310,16 +310,20 @@
           </li>
           <li>HTML [[!HTML]]
             <ul>
-              <li>Devices MUST support the conformance class <b><a href="https://html.spec.whatwg.org/multipage/infrastructure.html#interactive">Web browsers and other interactive user agents</a></b>.</li>
-              <li>Devices MUST support a mechanism to construct instances of <a href="https://html.spec.whatwg.org/multipage/media.html#text-track-cue">TextTrackCue</a> or an interface that inherits from it.
+              <li>Devices MUST support the conformance class <b><a href="https://html.spec.whatwg.org/review-drafts/2024-01/#interactive">Web browsers and other interactive user agents</a></b>.</li>
+              <li>Devices MUST support a mechanism to construct instances of <a href="https://html.spec.whatwg.org/review-drafts/2024-01/#text-track-cue">TextTrackCue</a> or an interface that inherits from it.
                 <ul>
-                  <li>Note: Current user agent implementations meet this requirement either by supporting <a href="https://w3c.github.io/webvtt/#vttcue">VTTCue</a> or by supporting a constructor for <a href="https://html.spec.whatwg.org/multipage/media.html#text-track-cue">TextTrackCue</a> that is no longer included in the HTML specification [[!HTML]].</li>
+                  <li>Note: Current user agent implementations meet this requirement either by supporting <a href="https://www.w3.org/TR/webvtt1/#the-vttcue-interface">VTTCue</a> or by supporting a constructor for <a href="https://html.spec.whatwg.org/review-drafts/2024-01/#text-track-cue">TextTrackCue</a> that is no longer included in the HTML specification [[!HTML]].</li>
                 </ul>
               </li>
               <li>Exceptions:
                 <ul>
-                  <li><a href="https://html.spec.whatwg.org/multipage/webappapis.html#css-module-script">CSS module scripts</a> are not yet widely supported.</li>
-                  <li>The <a href="https://html.spec.whatwg.org/multipage/interaction.html#attr-hidden-until-found-keyword"><code>hidden=until-found</code></a> HTML attribute and the <a href="https://html.spec.whatwg.org/multipage/webappapis.html#event-handlers-on-elements,-document-objects,-and-window-objects:event-beforematch"><code>beforematch</code></a> event are not yet widely supported.</li>
+                  <li><a href="https://html.spec.whatwg.org/review-drafts/2024-01/#css-module-script">CSS module scripts</a> are not yet widely supported.</li>
+                  <li>The <a href="https://html.spec.whatwg.org/review-drafts/2024-01/#attr-hidden-until-found-state"><code>hidden=until-found</code></a> HTML attribute and the <a href="https://html.spec.whatwg.org/review-drafts/2024-01/#event-beforematch"><code>beforematch</code></a> event are not yet widely supported.</li>
+                  <li>The <a href="https://html.spec.whatwg.org/review-drafts/2024-01/#fetch-priority-attributes"><code>fetchpriority=""</code> attribute</a> is not yet widely supported.</li>
+                  <li>The <a href="https://html.spec.whatwg.org/review-drafts/2024-01/#contenteditable"><code>contenteditable="plaintext-only"</code> attribute</a> is not yet widely supported.</li>
+                  <li>The <a href="https://html.spec.whatwg.org/review-drafts/2024-01/#close-requests-and-close-watchers">CloseWatcher API</a> is not yet widely supported.</li>
+                  <li>The <a href="https://html.spec.whatwg.org/review-drafts/2024-01/#common-input-element-apis:htmlselectelement"><code>showPicker()</code> support for <code>&lt;select&gt;</code> elements</a> is not yet widely supported.</li>
                 </ul>
               </li>
             </ul>
@@ -416,7 +420,15 @@
         <h3>Networking specifications</h3>
         <p>Devices MUST be conforming implementations of the following specifications:</p>
         <ul>
-          <li>Fetch [[!FETCH]]</li>
+          <li>Fetch [[!FETCH]]
+            <ul>
+              <li>Exceptions:
+                <ul>
+                  <li>The <a href="https://fetch.spec.whatwg.org/review-drafts/2023-12/#sec-purpose-header"><code>Sec-Purpose: prefetch</code> header</a> is not yet widely supported.</li>
+                  <li>The <a href="https://fetch.spec.whatwg.org/review-drafts/2023-12/#concept-request-destination"><code>"json"</code> destination for JSON modules</a> is not yet widely supported.</li>
+               </ul>
+            </ul>
+          </li>
           <li>WebSockets [[!WEBSOCKETS]]</li>
           <li>XMLHttpRequest [[!XHR]]</li>
         </ul>
