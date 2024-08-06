@@ -20,6 +20,8 @@ This repository contains the Web Media API Snapshot specification that is being 
 - Web Media API Snapshot 2024 is planned to be published Q4 2024.
 - [Web Media API Snapshot](https://w3c.github.io/webmediaapi/) is the latest version on the repository.
 
+The source code & documentation for the test suites are available at the [cta-wave/WMAS](https://github.com/cta-wave/WMAS) repository
+
 The [Web Media API Community Group](https://www.w3.org/community/webmediaapi) previously maintained repositories for two other specifications that have since been deprecated:
 - [Web Media Application Developer Guidelines](https://github.com/w3c/webmediaguidelines/)
 - [Web Media User Agent Integration](https://github.com/w3c/webmediaporting)
