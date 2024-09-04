@@ -250,27 +250,28 @@
       </section>
       <section>
         <h3>CSS specifications</h3>
-        <p>Devices MUST be conforming implementations of the following specifications, which are derived from the official Cascading Style Sheets definition from CSS Snapshot 2018 [[?CSS-2018]] as well as more recent revisions to CSS specifications as appropriate:</p>
-        <p class="note" role="note">As part of the updates included in CSS Snapshot 2018, the <a href="https://www.w3.org/TR/css-2018/#profiles">CSS Profiles</a> effort was discontinued.</p>
+        <p>Devices MUST be conforming implementations of the following specifications, which are derived from the official Cascading Style Sheets definition from CSS Snapshot 2023 [[?CSS-2023]] as well as more recent revisions to CSS specifications as appropriate:</p>
         <ul>
           <li>Cascading Style Sheets Level 2 Revision 1 (CSS 2.1) Specification [[!CSS2]]</li>
           <li>Compositing and Blending Level 1 [[!COMPOSITING]]</li>
-          <li>CSS Animations [[!CSS3-ANIMATIONS]]</li>
+          <li>CSS Animations Level 1 [[!CSS-ANIMATIONS-1]]</li>
           <li>CSS Backgrounds and Borders Module Level 3 [[!CSS3-BACKGROUND]]</li>
           <li>CSS Basic User Interface Module Level 3 (CSS3 UI) [[!CSS-UI-3]]</li>
+          <li>CSS Box Model Module Level 3 [[!CSS-BOX-3]]</li>
           <li>CSS Cascading and Inheritance Level 4 [[!CSS-CASCADE-4]]</li>
           <li>CSS Color Module Level 4 [[!CSS-COLOR-4]]</li>
           <li>CSS Conditional Rules Module Level 3 [[!CSS3-CONDITIONAL]]</li>
           <li>CSS Containment Module Level 1 [[!CSS-CONTAIN-1]]</li>
+          <li>CSS Counter Styles Level 3 [[!CSS-COUNTER-STYLES-3]]</li>
           <li>CSS Custom Properties For Cascading Variables Module Level 1 [[!CSS-VARIABLES-1]]</li>
           <li>CSS Easing Functions Level 1 [[!CSS-EASING-1]]</li>
           <li>CSS Flexible Box Layout Module Level 1 [[!CSS-FLEXBOX-1]]</li>
           <li>CSS Font Loading Module Level 3 [[!CSS-FONT-LOADING-3]]</li>
           <li>CSS Fonts Module Level 3 [[!CSS-FONTS-3]]</li>
           <li>CSS Grid Layout Module Level 1 [[!CSS-GRID-1]]</li>
-          <li>CSS Image Values and Replaced Content Module Level 3 [[!CSS3-IMAGES]]</li>
+          <li>CSS Images Module Level 3 [[!CSS-IMAGES-3]]</li>
           <li>CSS Logical Properties and Values Level 1 [[!CSS-LOGICAL-1]]</li>
-          <li>CSS Multi-column Layout Module [[!CSS3-MULTICOL]]</li>
+          <li>CSS Multi-column Layout Module Level 1 [[!CSS-MULTICOL-1]]</li>
           <li>CSS Namespaces Module Level 3 [[!CSS-NAMESPACES-3]]</li>
           <li>CSS Scroll Snap Module Level 1 [[!CSS-SCROLL-SNAP-1]]</li>
           <li>CSS Shapes Module Level 1 [[!CSS-SHAPES-1]]</li>
@@ -282,13 +283,17 @@
               <li>Exception: applying CSS transform functions to <code>video</code> elements is not required to be supported. More complex requirements such as <a href="https://www.w3.org/TR/css-transforms-1/#funcdef-transform-rotate">2D rotate</a>, <a href="https://www.w3.org/TR/css-transforms-1/#funcdef-transform-skew">2D skew</a> or any of the 3D transforms may not work at all or may be limited to unencrypted content and/or to HD / SD content or even to only SD content. They may also result in dropped frames.</li>
             </ul>
           </li>
-          <li>CSS Transitions [[!CSS3-TRANSITIONS]]</li>
+          <li>CSS Transitions Level 1 [[!CSS-TRANSITIONS-1]]</li>
           <li>CSS Values and Units Module Level 3 [[!CSS-VALUES]]</li>
           <li>CSS Will Change Module Level 1 [[CSS-WILL-CHANGE-1]]</li>
           <li>CSS Writing Modes Level 3 [[!CSS-WRITING-MODES-3]]</li>
           <li>CSSOM View Module [[!CSSOM-VIEW]]</li>
           <li>Filter Effects Module Level 1 [[!FILTER-EFFECTS-1]]</li>
-          <li>Media Queries [[!CSS3-MEDIAQUERIES]]</li>
+          <li>Media Queries Level 4 [[!MEDIAQUERIES-4]]
+            <ul>
+              <li>Note: As part of the updates included in Media Queries Level 4, the supported media types have been reduced to only <code>'all'</code>, <code>'print'</code>, and <code>'screen'</code>. Other previous media types, such as <a href="https://www.w3.org/TR/mediaqueries-4/#valdef-media-tv"><code>'tv'</code></a>, have been deprecated. Informal testing suggests this reduction has been implemented in browser code bases for a number of years.</li>
+            </ul>
+          </li>
           <li>Resize Observer [[!RESIZE-OBSERVER-1]]</li>
           <li>Selectors Level 3 [[!SELECT]]</li>
           <li>Web Animations [[!WEB-ANIMATIONS]]</li>
