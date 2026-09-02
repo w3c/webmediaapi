@@ -67,8 +67,8 @@
             authors: [
               "Anne van Kesteren"
             ],
-            href: "https://fetch.spec.whatwg.org/review-drafts/2024-12/",
-            date: "16 December 2024",
+            href: "https://fetch.spec.whatwg.org/review-drafts/2025-12/",
+            date: "15 December 2025",
             status: "Review Draft (use this version or later)",
             publisher: "WHATWG"
           },
@@ -77,8 +77,8 @@
             authors: [
               "Philip Jägenstedt"
             ],
-            href: "https://fullscreen.spec.whatwg.org/review-drafts/2024-07/",
-            date: "15 July 2024",
+            href: "https://fullscreen.spec.whatwg.org/review-drafts/2026-01/",
+            date: "20 January 2026",
             status: "Review Draft (use this version or later)",
             publisher: "WHATWG"
           },
@@ -101,8 +101,8 @@
             authors: [
               "Anne van Kesteren"
             ],
-            href: "https://notifications.spec.whatwg.org/review-drafts/2025-01/",
-            date: "20 January 2025",
+            href: "https://notifications.spec.whatwg.org/review-drafts/2026-01/",
+            date: "20 January 2026",
             status: "Review Draft (use this version or later)",
             publisher: "WHATWG"
           },
@@ -121,8 +121,8 @@
             authors: [
               "Anne van Kesteren"
             ],
-            href: "https://xhr.spec.whatwg.org/review-drafts/2024-02/",
-            date: "19 February 2024",
+            href: "https://xhr.spec.whatwg.org/review-drafts/2025-08/",
+            date: "18 August 2025",
             status: "Review Draft (use this version or later)",
             publisher: "WHATWG"
           },
@@ -202,6 +202,7 @@
         <p>This section lists the web APIs to support media web apps that are supported across all four of the most widely used user agent code bases at the time of publication (i.e., Chrome, Edge, Firefox, and Safari). We encourage manufacturers to develop products that support the APIs in the most recent version of this specification.</p>
         <p>The approach taken in this draft is only to include specifications that are of particular significance to authors, but not include all the specifications cited by those included specifications. For example, HTTP is required by the HTML spec and is therefore not included here.</p>
         <p>In addition, the specifications of the web APIs mentioned here may in turn (recursively) reference other specifications that are not supported across all four of the most widely used user agent code bases. This possibility is understood and accepted. For example, Content Security Policy Level 2 [[CSP2]] references the <code>image()</code> function from CSS Images Module Level 4 [[CSS-IMAGES-4]], but CSS Images Module Level 4 is not yet widely supported. These unsupported referenced specifications are not explicitly cited as exceptions in this specification but, in spite of this, will not be tested as part of our tests.</p>
+        <p>The referenced URLs in this specification are captured at time of publication and may later resolve to an updated version of the referenced standard, possibly under a different title. Where this occurs, the title and version specified in this draft take precedence over the current content at that URL.</p>
         <section>
           <h3>Features with limited implementation</h3>
           <p>Parts of some web specifications are not currently implemented across all user agent code bases and may never be. Consequently, these features will not be included in our tests. Any such features are noted as exceptions under that API.</p>
@@ -225,13 +226,12 @@
         <p>Devices MUST be conforming implementations of the following specifications:</p>
         <ul>
           <li>DOM [[!DOM]]</li>
-          <li>ECMAScript 2025 Language Specification [[!ECMASCRIPT-2025]]
+          <li>ECMAScript 2026 Language Specification [[!ECMASCRIPT-2026]]
             <ul>
               <li>Exceptions:
                 <ul>
-                  <li>The <a href="https://262.ecma-international.org/16.0/#sec-atomics.waitasync"><code>Atomics.waitAsync</code></a> method is not yet widely supported.</li>
-                  <li><a href="https://262.ecma-international.org/16.0/#prod-RegularExpressionModifier">Regular Expression Inline Pattern Modifiers</a> are not yet widely supported.</li>
-                  <li>16-bit floating point number support required for <a href="https://262.ecma-international.org/16.0/#sec-float16array"><code>Float16Array</code></a> is not universal, both in the JavaScript API and the underlying CPU architecture. Using it may result in slower performance on some platforms.</li>
+                  <li>The <a href="https://262.ecma-international.org/17.0/#sec-error.iserror"><code>Error.isError</code></a> method is not yet widely supported.</li>
+                  <li>16-bit floating point number support required for <a href="https://262.ecma-international.org/17.0/#sec-float16array"><code>Float16Array</code></a> is not universal, both in the JavaScript API and the underlying CPU architecture. Using it may result in slower performance on some platforms.</li>
                </ul>
             </ul>
           </li>
@@ -246,8 +246,6 @@
               <li>Exceptions:
                 <ul>
                   <li><a href="https://html.spec.whatwg.org/review-drafts/2024-01/#css-module-script">CSS module scripts</a> are not yet widely supported.</li>
-                  <li>The <a href="https://html.spec.whatwg.org/review-drafts/2024-01/#attr-hidden-until-found-state"><code>hidden=until-found</code></a> HTML attribute and the <a href="https://html.spec.whatwg.org/review-drafts/2024-01/#event-beforematch"><code>beforematch</code></a> event are not yet widely supported.</li>
-                  <li>The <a href="https://html.spec.whatwg.org/review-drafts/2024-01/#navigation-api">Navigation API</a> is not yet widely supported.</li>
                   <li>The <a href="https://html.spec.whatwg.org/review-drafts/2024-01/#close-requests-and-close-watchers">CloseWatcher API</a> is not yet widely supported.</li>
                   <li>The <a href="https://html.spec.whatwg.org/review-drafts/2024-01/#common-input-element-apis:htmlselectelement"><code>showPicker()</code> support for <code>&lt;select&gt;</code> elements</a> is not yet widely supported.</li>
                 </ul>
@@ -258,7 +256,7 @@
       </section>
       <section>
         <h3>CSS specifications</h3>
-        <p>Devices MUST be conforming implementations of the following specifications, which are derived from the official Cascading Style Sheets definition from CSS Snapshot 2024 [[?CSS-2024]] as well as more recent revisions to CSS specifications as appropriate:</p>
+        <p>Devices MUST be conforming implementations of the following specifications, which are derived from the official Cascading Style Sheets definition from CSS Snapshot 2026 [[?CSS-2026]] as well as more recent revisions to CSS specifications as appropriate:</p>
         <ul>
           <li>Cascading Style Sheets Level 2 Revision 1 (CSS 2.1) Specification [[!CSS2]]</li>
           <li>Compositing and Blending Level 1 [[!COMPOSITING]]</li>
@@ -266,10 +264,10 @@
           <li>CSS Backgrounds and Borders Module Level 3 [[!CSS3-BACKGROUND]]</li>
           <li>CSS Basic User Interface Module Level 3 (CSS3 UI) [[!CSS-UI-3]]</li>
           <li>CSS Box Model Module Level 3 [[!CSS-BOX-3]]</li>
-          <li>CSS Cascading and Inheritance Level 4 [[!CSS-CASCADE-4]]</li>
+          <li>CSS Cascading and Inheritance Level 5 [[!CSS-CASCADE-5]]</li>
           <li>CSS Color Module Level 4 [[!CSS-COLOR-4]]</li>
-          <li>CSS Conditional Rules Module Level 3 [[!CSS3-CONDITIONAL]]</li>
-          <li>CSS Containment Module Level 1 [[!CSS-CONTAIN-1]]</li>
+          <li>CSS Conditional Rules Module Level 4 [[!CSS-CONDITIONAL-4]]</li>
+          <li>CSS Containment Module Level 2 [[!CSS-CONTAIN-2]]</li>
           <li>CSS Counter Styles Level 3 [[!CSS-COUNTER-STYLES-3]]</li>
           <li>CSS Custom Properties For Cascading Variables Module Level 1 [[!CSS-VARIABLES-1]]</li>
           <li>CSS Easing Functions Level 1 [[!CSS-EASING-1]]</li>
@@ -281,7 +279,9 @@
           <li>CSS Logical Properties and Values Module Level 1 [[!CSS-LOGICAL-1]]</li>
           <li>CSS Multi-column Layout Module Level 1 [[!CSS-MULTICOL-1]]</li>
           <li>CSS Namespaces Module Level 3 [[!CSS-NAMESPACES-3]]</li>
+          <li>CSS Nesting Module Level 1 [[!CSS-NESTING-1]]</li>
           <li>CSS Scroll Snap Module Level 1 [[!CSS-SCROLL-SNAP-1]]</li>
+          <li>CSS Scrollbars Styling Module Level 1 [[!CSS-SCROLLBARS-1]]</li>
           <li>CSS Shapes Module Level 1 [[!CSS-SHAPES-1]]</li>
           <li>CSS Style Attributes [[!CSS-STYLE-ATTR]]</li>
           <li>CSS Syntax Module Level 3 [[!CSS-SYNTAX-3]]</li>
@@ -291,12 +291,15 @@
               <li>Exception: applying CSS transform functions to <code>video</code> elements is not required to be supported. More complex requirements such as <a href="https://www.w3.org/TR/css-transforms-1/#funcdef-transform-rotate">2D rotate</a>, <a href="https://www.w3.org/TR/css-transforms-1/#funcdef-transform-skew">2D skew</a> or any of the 3D transforms may not work at all or may be limited to unencrypted content and/or to HD / SD content or even to only SD content. They may also result in dropped frames.</li>
             </ul>
           </li>
+
           <li>CSS Transitions Module Level 1 [[!CSS-TRANSITIONS-1]]</li>
           <li>CSS Values and Units Module Level 3 [[!CSS-VALUES-3]]</li>
+          <li>CSS View Transitions Module Level 1 [[!CSS-VIEW-TRANSITIONS-1]]</li>
           <li>CSS Will Change Module Level 1 [[CSS-WILL-CHANGE-1]]</li>
           <li>CSS Writing Modes Level 3 [[!CSS-WRITING-MODES-3]]</li>
           <li>CSSOM View Module [[!CSSOM-VIEW]]</li>
           <li>Filter Effects Module Level 1 [[!FILTER-EFFECTS-1]]</li>
+          <li>Geometry Interfaces Module Level 1 [[!GEOMETRY-1]]</li>
           <li>Media Queries Level 4 [[!MEDIAQUERIES-4]]
             <ul>
               <li>Note: As part of the updates included in Media Queries Level 4, the supported media types have been reduced to only <code>'all'</code>, <code>'print'</code>, and <code>'screen'</code>. Other previous media types, such as <a href="https://www.w3.org/TR/mediaqueries-4/#valdef-media-tv"><code>'tv'</code></a>, have been deprecated. Informal testing suggests this reduction has been implemented in browser code bases for a number of years.</li>
@@ -318,7 +321,11 @@
               <li>Note: Support is limited to video track ranges.
             </ul>
           </li>
-          <li>Media Source Extensions [[!MEDIA-SOURCE-1]]</li>
+          <li>Media Source Extensions [[!MEDIA-SOURCE-1]]
+            <ul>
+              <li>Note: In addition to the features specified in Media Source Extensions v1, the <a href="https://www.w3.org/TR/media-source-2/#dom-sourcebuffer-changetype"><code>changeType</code> method</a> as defined by Media Source Extensions v2 [[?MEDIA-SOURCE-2]] is also required given its support across all four of the most widely used user agent code bases.</li>
+            </ul>
+          </li>
           <li>Web Audio API [[!WEBAUDIO-1.0]]</li>
           <li>WebRTC: Real-Time Communication in Browsers [[!WEBRTC]]
             <ul>
@@ -335,7 +342,7 @@
           <li>Graphics Interchange Format [[!GIF]]</li>
           <li>JPEG File Interchange Format [[!JPEG]]</li>
           <li>Portable Network Graphics (PNG) Specification (Second Edition) [[!PNG2e-20031110]]</li>
-          <li>WebGL Specification [[!WEBGL-103]]</li>
+          <li>WebGL 2 Specification [[!WEBGL-200]]</li>
           <li>Note: HTML Canvas 2D Context is also required as part of the HTML specification [[!HTML]].</li>
         </ul>
       </section>
@@ -355,10 +362,11 @@
             <ul>
               <li>Exceptions:
                 <ul>
-                  <li>The <a href="https://fetch.spec.whatwg.org/review-drafts/2024-12/#sec-purpose-header"><code>Sec-Purpose: prefetch</code> header</a> is not yet widely supported.</li>
-                  <li>The <a href="https://fetch.spec.whatwg.org/review-drafts/2024-12/#concept-request-destination"><code>"json"</code> destination for JSON modules</a> is not yet widely supported.</li>
-                  <li><a href="https://fetch.spec.whatwg.org/review-drafts/2024-12/#body-mixin">Setting the proper realm of the result of <code>Response arrayBuffer()</code></a> is not yet widely supported.</li>
-                  <li><a href="https://fetch.spec.whatwg.org/review-drafts/2024-12/#scheme-fetch">Partitioning <code>Blob URL</code> fetches by storage key</a> is not yet widely supported.</li>
+                  <li>The <a href="https://fetch.spec.whatwg.org/review-drafts/2025-12/#sec-purpose-header"><code>Sec-Purpose: prefetch</code> header</a> is not yet widely supported.</li>
+                  <li>The <a href="https://fetch.spec.whatwg.org/review-drafts/2025-12/#concept-request-destination"><code>"json"</code> destination for JSON modules</a> is not yet widely supported.</li>
+                  <li><a href="https://fetch.spec.whatwg.org/review-drafts/2025-12/#body-mixin">Setting the proper realm of the result of <code>Response arrayBuffer()</code></a> is not yet widely supported.</li>
+                  <li><a href="https://fetch.spec.whatwg.org/review-drafts/2025-12/#scheme-fetch">Partitioning <code>Blob URL</code> fetches by storage key</a> is not yet widely supported.</li>
+                  <li><a href="https://fetch.spec.whatwg.org/review-drafts/2025-12/#deferred-fetch">Deferred fetching via <code>fetchLater()</code></a> is not yet widely supported.</li>
                 </ul>
             </ul>
           </li>
@@ -386,10 +394,14 @@
         <p>Devices MUST be conforming implementations of the following specifications:</p>
         <ul>
           <li>Beacon [[!BEACON]]</li>
+          <li>Event Timing API [[!EVENT-TIMING]]</li>
           <li>High Resolution Time [[!HR-TIME-3]]</li>
+          <li>Largest Contentful Paint [[!LARGEST-CONTENTFUL-PAINT]]</li>
           <li>Navigation Timing [[!NAVIGATION-TIMING]]</li>
           <li>Performance Timeline [[!PERFORMANCE-TIMELINE]]</li>
+          <li>Reporting API [[!REPORTING-1]]</li>
           <li>Resource Timing [[!RESOURCE-TIMING]]</li>
+          <li>Server Timing [[!SERVER-TIMING]]</li>
           <li>User Timing Level 2 [[!USER-TIMING-2]]</li>
         </ul>
       </section>
